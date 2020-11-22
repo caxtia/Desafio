@@ -60,4 +60,18 @@ ${AlertDeleteIssue}         xpath=//h4[text()='Are you sure you want to delete t
 ${ConfirmDeleteIssue}       xpath=//button[contains(text(),'Delete this issue')]
 ${closeIssue}               xpath=//span[text()='Close issue']
 
+# xpath editar ficheiros
+${editFile}                      xpath=//button[@aria-label='Edit this file']
+${btnCancelEditFile}             xpath=//a[text()='Cancel' and not(contains(@class,'inline-block'))]
+${checkNewBranchEditFile}        xpath=//strong[text()='new branch']/../input
+${titleEditFile}                 xpath=//input[@id='commit-summary-input']
+${descriptEditFile}              xpath=//textarea[@id='commit-description-textarea']
+${sendChangesEditFile}           xpath=//button[contains(text(),'Propose changes') or contains(text(),'Commit changes')]
 
+
+${createPullRequest}             xpath=//button[text()='Create pull request']
+${mergePullRequest}              xpath=//button[contains(text(),'Merge pull request')]
+${notConflictPullRequest}        xpath=//div[contains(@class,'erging-body') and not(contains(@class,'merge-warning'))]/h3[text()='This branch has no conflicts with the base branch']
+${confirmMerge}                  xpath=//button[contains(text(),'Confirm merge')]
+${deleteBranch}                  xpath=//button[contains(text(),'Delete branch')]
+${pullMergeSucess}               xpath=//h4[contains(text(),'Pull request successfully merged and closed')]

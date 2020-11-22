@@ -236,3 +236,67 @@ Fechar um issue
     ...     ELSE        log to console      Issue fechada com sucesso:${issue}
     log to console      *** End: Fechar um issue***
 
+Editar ficheiro
+    [Documentation]    editar um ficheiro no gitHub
+    [Arguments]       ${nomeFicheiro}=${EMPTY}      ${descricao}=${EMPTY}       ${linha}=${EMPTY}
+    ...               ${tipoBranch}=${EMPTY}
+
+
+    log to console      *** Start: Editar ficheiro ***
+
+    click element                       xpath=//a[text()='${nomeFicheiro}']
+    wait until element is visible       ${editFile}
+    click element                       ${editFile}
+    wait until element is visible       ${btnCancelEditFile}
+
+    capture page screenshot         FicheiroInicial.png
+
+    click element       xpath=//div[text()='${linha}']/../..
+
+    ${timestmp}=        Get current Date        result_format=%Y%m%d%H%M%S
+
+    ${descricao}=       set variable if    '${descricao}' != '${EMPTY}'       ${descricao}      AUT-${timestmp}
+    input text          xpath=//div[text()='${linha}']/../..       ${descricao}
+
+    ${tipoBranch}=       set variable if    '${tipoBranch}' != '${EMPTY}'       ${tipoBranch}      new
+    run keyword if      '${tipoBranch}' == 'new'        click element       ${checkNewBranchEditFile}
+
+    wait until element is visible        ${titleEditFile}
+    input text                           ${titleEditFile}           ${nomeFicheiro}
+
+    input text                           ${descriptEditFile}        Add ${descricao} to line ${linha}.
+    capture page screenshot                 FicheiroAlteracoes.png
+    click element                        ${sendChangesEditFile}
+
+    log to console      *** End: Editar ficheiro ***
+    [Return]       ${descricao}
+
+
+Criar pull request e merge num ficheiro editado
+    [Documentation]   criacao de um pull request e um merge para oramo principal (main) num ficheiro editado
+    [Arguments]       ${descricao}
+
+    log to console      *** Start: Criar pull request e merge num ficheiro editado ***
+
+    wait until element is visible           ${createPullRequest}
+
+    #criar um pull request
+    click element                           ${createPullRequest}
+
+    #validar que nao existem conflitos
+    wait until element is visible           ${mergePullRequest}
+    wait until element is visible           ${notConflictPullRequest}
+
+    click element                           ${mergePullRequest}
+
+    wait until element is visible           ${confirmMerge}
+    click element                           ${confirmMerge}
+
+    wait until element is visible           ${deleteBranch}
+    wait until element is visible           ${pullMergeSucess}      timeout=20
+    click element                           ${deleteBranch}
+
+
+    log to console             Merge realizado com sucesso: ${pullMergeSucess}
+
+    log to console      *** End: Criar pull request e merge num ficheiro editado ***
