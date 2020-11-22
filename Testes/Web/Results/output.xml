@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20201121 19:25:07.756" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="C:\Users\csous\PycharmProjects\Desafio\Testes\Web" id="s1" name="Web">
+<suite source="C:\Users\csous\PycharmProjects\Desafio\Testes\Web\Eliminar ou fechar uma issue.robot" id="s1-s1" name="Eliminar ou fechar uma issue">
+<test id="s1-s1-t1" name="Eliminar ou fechar uma issue">
+<kw name="Realizar Login na pagina web GitHub" library="Eliminar ou fechar uma issue_steps">
+<doc>Abrir Url e colocar credenciais de acesso</doc>
+<kw name="Abrir URL no browser" library="Funcionalidades">
+<doc>Abrir browser e adicionar URL GitHub</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** Start: Abrir URL no browser ***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:08.078" starttime="20201121 19:25:08.078"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URLGitHub}</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20201121 19:25:08.079" level="INFO">Opening browser 'chrome' to base url 'https://github.com'</msg>
+<status status="PASS" endtime="20201121 19:25:13.310" starttime="20201121 19:25:08.079"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20201121 19:25:15.487" starttime="20201121 19:25:13.311"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${hMenSignIn}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:15.563" starttime="20201121 19:25:15.488"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BtnPopUpAcc}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:15.564" level="INFO">Clicking element 'xpath=//button[text()='Accept' and not(contains(@class,'BtnGroup-item'))]'.</msg>
+<status status="PASS" endtime="20201121 19:25:15.665" starttime="20201121 19:25:15.563"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** End: Abrir URL no browser ***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:15.666" starttime="20201121 19:25:15.666"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:15.666" starttime="20201121 19:25:08.078"></status>
+</kw>
+<kw name="Realizar login no Github" library="Funcionalidades">
+<doc>Realizar login no Git Hub</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** Start: Realizar login no Github ***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:15.667" starttime="20201121 19:25:15.667"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${hMenSignIn}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:15.668" level="INFO">Clicking element 'xpath=//a[contains(@data-ga-click,'Sign in') and (contains(@class,'HeaderMenu'))]'.</msg>
+<status status="PASS" endtime="20201121 19:25:17.817" starttime="20201121 19:25:15.667"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btnSignIn}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:17.869" starttime="20201121 19:25:17.817"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Username}' != '${EMPTY}'</arg>
+<arg>input text</arg>
+<arg>${inputUser}</arg>
+<arg>${Username}</arg>
+<arg>ELSE</arg>
+<arg>input text</arg>
+<arg>${inputUser}</arg>
+<arg>${user}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${inputUser}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:17.872" level="INFO">Typing text 'AutoTest91' into text field 'xpath=//input[@name='login']'</msg>
+<status status="PASS" endtime="20201121 19:25:17.994" starttime="20201121 19:25:17.872"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:17.994" starttime="20201121 19:25:17.870"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${PassWord}' != '${EMPTY}'</arg>
+<arg>input text</arg>
+<arg>${inputPass}</arg>
+<arg>${PassWord}</arg>
+<arg>ELSE</arg>
+<arg>input text</arg>
+<arg>${inputPass}</arg>
+<arg>${pass}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${inputPass}</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:17.996" level="INFO">Typing text 'AUto2020' into text field 'xpath=//input[@name='password']'</msg>
+<status status="PASS" endtime="20201121 19:25:18.136" starttime="20201121 19:25:17.995"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:18.136" starttime="20201121 19:25:17.994"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btnSignIn}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:18.137" level="INFO">Clicking element 'xpath=//input[@value='Sign in']'.</msg>
+<status status="PASS" endtime="20201121 19:25:19.737" starttime="20201121 19:25:18.136"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${IconGitHub}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:19.799" starttime="20201121 19:25:19.737"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** End: Realizar login no Github ***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:19.801" starttime="20201121 19:25:19.800"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:19.801" starttime="20201121 19:25:15.666"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:19.801" starttime="20201121 19:25:08.077"></status>
+</kw>
+<kw name="Eliminar ou fechar issues no repositorio" library="Eliminar ou fechar uma issue_steps">
+<doc>aceder ao repositorio que pretende</doc>
+<arguments>
+<arg>${nomeRepositorio}</arg>
+<arg>${tituloIssue}</arg>
+<arg>${Acao}</arg>
+</arguments>
+<kw name="Selecionar menu de conta" library="Funcionalidades">
+<doc>selecionar uma opçao do menu associado ao login da conta</doc>
+<arguments>
+<arg>Your repositories</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** Start: Selecionar menu de conta***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:19.805" starttime="20201121 19:25:19.805"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${iconAvatar}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:19.807" level="INFO">Clicking element 'xpath=//summary[contains(@data-ga-click,'icon:avatar')]'.</msg>
+<status status="PASS" endtime="20201121 19:25:19.953" starttime="20201121 19:25:19.806"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//a[text()='${menu}']</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:20.247" starttime="20201121 19:25:19.954"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[text()='${menu}']</arg>
+</arguments>
+<msg timestamp="20201121 19:25:20.249" level="INFO">Clicking element 'xpath=//a[text()='Your repositories']'.</msg>
+<status status="PASS" endtime="20201121 19:25:21.118" starttime="20201121 19:25:20.248"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** End: Selecionar menu de conta***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:21.119" starttime="20201121 19:25:21.118"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:21.119" starttime="20201121 19:25:19.803"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>('${nomeRepositorio}' == '${EMPTY}')</arg>
+<arg>Desafio</arg>
+<arg>${nomeRepositorio}</arg>
+</arguments>
+<assign>
+<var>${nomeRepositorio}</var>
+</assign>
+<msg timestamp="20201121 19:25:21.121" level="INFO">${nomeRepositorio} = Desafio</msg>
+<status status="PASS" endtime="20201121 19:25:21.122" starttime="20201121 19:25:21.120"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'${nomeRepositorio}')]/../../h3</arg>
+</arguments>
+<msg timestamp="20201121 19:25:21.124" level="INFO">Clicking element 'xpath=//a[contains(text(),'Desafio')]/../../h3'.</msg>
+<status status="PASS" endtime="20201121 19:25:22.259" starttime="20201121 19:25:21.122"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${selectMenuIssues}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:22.259" level="INFO">Clicking element 'xpath=//span[@data-content='Issues']'.</msg>
+<status status="PASS" endtime="20201121 19:25:22.404" starttime="20201121 19:25:22.259"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20201121 19:25:27.405" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20201121 19:25:27.405" starttime="20201121 19:25:22.405"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>('${tituloIssue}' == '${EMPTY}')</arg>
+<arg>AUT</arg>
+<arg>${tituloIssue}</arg>
+</arguments>
+<assign>
+<var>${tituloIssue}</var>
+</assign>
+<msg timestamp="20201121 19:25:27.406" level="INFO">${tituloIssue} = AUT</msg>
+<status status="PASS" endtime="20201121 19:25:27.406" starttime="20201121 19:25:27.405"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>('${Acao}' == '${EMPTY}')</arg>
+<arg>E</arg>
+<arg>${Acao}</arg>
+</arguments>
+<assign>
+<var>${Acao}</var>
+</assign>
+<msg timestamp="20201121 19:25:27.406" level="INFO">${Acao} = E</msg>
+<status status="PASS" endtime="20201121 19:25:27.407" starttime="20201121 19:25:27.406"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Acao}' == 'E'</arg>
+<arg>Eliminar um issue</arg>
+<arg>${tituloIssue}</arg>
+<arg>ELSE IF</arg>
+<arg>'${Acao}' == 'C'</arg>
+<arg>Fechar um issue</arg>
+<arg>${tituloIssue}</arg>
+</arguments>
+<kw name="Eliminar um issue" library="Funcionalidades">
+<doc>Eliminar um issue</doc>
+<arguments>
+<arg>${tituloIssue}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** Start: Eliminar um issue***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:27.408" starttime="20201121 19:25:27.408"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'${issue}')]</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:27.437" starttime="20201121 19:25:27.408"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'${issue}')]</arg>
+</arguments>
+<assign>
+<var>${nomeComplet}</var>
+</assign>
+<msg timestamp="20201121 19:25:27.461" level="INFO">${nomeComplet} = AUT-Issue-20201121192439</msg>
+<status status="PASS" endtime="20201121 19:25:27.461" starttime="20201121 19:25:27.437"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Nome completo:${nomeComplet}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:27.462" starttime="20201121 19:25:27.462"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'${issue}')]</arg>
+</arguments>
+<msg timestamp="20201121 19:25:27.464" level="INFO">Clicking element 'xpath=//a[contains(text(),'AUT')]'.</msg>
+<status status="PASS" endtime="20201121 19:25:27.547" starttime="20201121 19:25:27.462"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${DeleteIssue}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:28.241" starttime="20201121 19:25:27.547"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DeleteIssue}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:28.242" level="INFO">Clicking element 'xpath=//strong[text()='Delete issue']'.</msg>
+<status status="PASS" endtime="20201121 19:25:28.334" starttime="20201121 19:25:28.242"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${AlertDeleteIssue}</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:28.607" starttime="20201121 19:25:28.335"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>DeleteIssue.png</arg>
+</arguments>
+<msg timestamp="20201121 19:25:29.018" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="DeleteIssue.png"&gt;&lt;img src="DeleteIssue.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201121 19:25:29.018" starttime="20201121 19:25:28.608"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${AlertDeleteIssue}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:29.019" level="INFO">Clicking element 'xpath=//h4[text()='Are you sure you want to delete this issue?']'.</msg>
+<status status="PASS" endtime="20201121 19:25:29.066" starttime="20201121 19:25:29.018"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ConfirmDeleteIssue}</arg>
+</arguments>
+<msg timestamp="20201121 19:25:29.067" level="INFO">Clicking element 'xpath=//button[contains(text(),'Delete this issue')]'.</msg>
+<status status="PASS" endtime="20201121 19:25:30.369" starttime="20201121 19:25:29.067"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201121 19:25:32.369" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20201121 19:25:32.369" starttime="20201121 19:25:30.369"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//a[contains(text(),'${nomeComplet}')]</arg>
+</arguments>
+<assign>
+<var>${exist}</var>
+</assign>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'${nomeComplet}')]</arg>
+</arguments>
+<msg timestamp="20201121 19:25:32.408" level="INFO">&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;link rel="dns-prefetch" href="https://github.githubassets.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://avatars0.githubusercontent.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://avatars1.githubusercontent.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://avatars2.githubusercontent.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://avatars3.githubusercontent.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://user-images.githubusercontent.com/"&gt;
+
+
+
+  &lt;link crossorigin="anonymous" media="all" integrity="sha512-sTPn4ucUv51v42xE6Jeddjc8xD4F5Qzs3PUlX4tko79zmOo+vjkqOGBNcXNtGkfjoFSRmxAzx3X25ApYG0NY1w==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-b133e7e2e714bf9d6fe36c44e8979d76.css"&gt;
+  
+    &lt;link crossorigin="anonymous" media="all" integrity="sha512-A8w/DD63RBMyaY7eGrgr/4makVMyzH4daVz5m0tKEBuYG87gXdORJC5x6TR5XOk3Qn2PBh4az+oi23kACnfo2A==" rel="stylesheet" href="https://github.githubassets.com/assets/github-03cc3f0c3eb7441332698ede1ab82bff.css"&gt;
+    
+    
+    
+    
+
+  &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-8K2vvwbW+6H27Nad5ydg8PA2/aMD/LKq+EiK9s0U0hhVZxCI2tWBsYk9beAtisRw2j+Or5k2/F+6dk02nmj/PA==" type="application/javascript" src="https://github.githubassets.com/assets/environment-f0adafbf.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-nOb5cD4uddKxrSMmKJX2jUVBPndJoROvuYXV8O8V1Gcqw2dxH4ySor+AXQfZ+XIIo+A9hcbXXWWYz4gMi49ZYA==" type="application/javascript" src="https://github.githubassets.com/assets/chunk-frameworks-9ce6f970.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-57BXsO8XaL0t9BZAtpvxNYFJHfZNrBwkfSyGeC3exSzN6O8TCruBADgWYbNEL8j3du298LBu6uVHMaO9l0NNIg==" type="application/javascript" src="https://github.githubassets.com/assets/chunk-vendor-e7b057b0.js"&gt;&lt;/script&gt;
+  
+  &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-y5hnV/KE1/0QlSqpzQi+PqpFjFxmPDKjpFtRyNuzSCuFv4byupi/FPNQHnZeLueHxUczngr+0JsLVltNd9NUSg==" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-cb986757.js"&gt;&lt;/script&gt;
+  
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-F/8sNCLF603gJL0egQeZwFTYP9dfZAVEWHdjMssZ2opLZXRK08vgowBRzKyra6u9zU/rGVxe+igfJsSWzfO2lg==" type="application/javascript" data-module-id="./chunk-contributions-spider-graph.js" data-src="https://github.githubassets.com/assets/chunk-contributions-spider-graph-17ff2c34.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-obMR8mPKx8OvqRe34LgnUcxeJ1qujiA4ND3H6UX13ExMlA/WfHLjEzXRmgGRcRvN/8J1nzc+Z+jgz/PLTFy6zg==" type="application/javascript" data-module-id="./chunk-drag-drop.js" data-src="https://github.githubassets.com/assets/chunk-drag-drop-a1b311f2.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-yGHlU15Ycv/1UkpPTVKgm9bDZRVbDJxx0n94pbIWequIXR3FYSskJerCSCPSzBAeXis2ZLtihPIP/keMFYwkDg==" type="application/javascript" data-module-id="./chunk-jump-to.js" data-src="https://github.githubassets.com/assets/chunk-jump-to-c861e553.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-tcH4xCRuMBAh1PruDaiwGnRIbHlF6bGLhxyCQ16uqok1cV5QFMguVPWJtN9KI0jGQOgN+Pha3+uOUXhXdfK/qw==" type="application/javascript" data-module-id="./chunk-profile-pins-element.js" data-src="https://github.githubassets.com/assets/chunk-profile-pins-element-b5c1f8c4.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-gPx3bYhTjyC83X5u5KlEDJpwGAHt3AC2p5s9iMuAfPTeSj7kHlKMW231C3K3c7+jvlpWpELk8DJsefrYdRzqjA==" type="application/javascript" data-module-id="./chunk-randomColor.js" data-src="https://github.githubassets.com/assets/chunk-randomColor-80fc776d.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-E+H+wAtjiqutBvn2cnXzDIvmasIhYiS7i7JzOfFUwo+Ej8zT54OrJtP//RhwixnypgOpCF4JvqzYy6zOtORDmg==" type="application/javascript" data-module-id="./chunk-runner-groups.js" data-src="https://github.githubassets.com/assets/chunk-runner-groups-13e1fec0.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-qdiCkJPPR4LxwUKftEmJe2v79E8xnTceYqylsWkMsGuARkiKkX9iFNwkvZJ3bDfS5YHSPD3+k+N2/I73tvlL1Q==" type="application/javascript" data-module-id="./chunk-sortable-behavior.js" data-src="https://github.githubassets.com/assets/chunk-sortable-behavior-a9d88290.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-NpURjBPyJ0JT8hWOMbLErYNeb0bTkKfmFX1hl1F8C/q6jckqWObeOzEAcs6TRlj+cqAR6GDohEBxDgkYBlx+QQ==" type="application/javascript" data-module-id="./chunk-tweetsodium.js" data-src="https://github.githubassets.com/assets/chunk-tweetsodium-3695118c.js"&gt;&lt;/script&gt;
+    &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-e+30BriXsBu+fb/LGEU9gAzSwn25wRYzDDPpr2AA8jZJI9034xzRHYXjA9XhF+7ncBIGJ/uTD11G25/H0XyuZg==" type="application/javascript" data-module-id="./chunk-user-status-submit.js" data-src="https://github.githubassets.com/assets/chunk-user-status-submit-7bedf406.js"&gt;&lt;/script&gt;
+  
+  &lt;script crossorigin="anonymous" defer="defer" integrity="sha512-gGc0F9oTillPOFEvNpjp4WKPrr0T7EVEBonnNdC10gWN6qSVxwtzxInszLxOtl7qQXMNvyjCX+75O0Kane2p0A==" type="application/javascript" src="https://github.githubassets.com/assets/issues-80673417.js"&gt;&lt;/script&gt;
+
+  &lt;meta name="viewport" content="width=device-width"&gt;
+  
+  &lt;title&gt;Issues · AutoTest91/Desafio&lt;/title&gt;
+    &lt;meta name="description" content="Desafio automacao de testes. Contribute to AutoTest91/Desafio development by creating an account on GitHub."&gt;
+    &lt;link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub"&gt;
+  &lt;link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub"&gt;
+  &lt;meta property="fb:app_id" content="1401488693436528"&gt;
+  &lt;meta name="apple-itunes-app" content="app-id=1477376905"&gt;
+    &lt;meta name="twitter:image:src" content="https://avatars0.githubusercontent.com/u/74671357?s=400&amp;amp;v=4"&gt;&lt;meta name="twitter:site" content="@github"&gt;&lt;meta name="twitter:card" content="summary"&gt;&lt;meta name="twitter:title" content="AutoTest91/Desafio"&gt;&lt;meta name="twitter:description" content="Desafio automacao de testes. Contribute to AutoTest91/Desafio development by creating an account on GitHub."&gt;
+    &lt;meta property="og:image" content="https://avatars0.githubusercontent.com/u/74671357?s=400&amp;amp;v=4"&gt;&lt;meta property="og:site_name" content="GitHub"&gt;&lt;meta property="og:type" content="object"&gt;&lt;meta property="og:title" content="AutoTest91/Desafio"&gt;&lt;meta property="og:url" content="https://github.com/AutoTest91/Desafio"&gt;&lt;meta property="og:description" content="Desafio automacao de testes. Contribute to AutoTest91/Desafio development by creating an account on GitHub."&gt;
+
+
+
+    
+
+  &lt;link rel="assets" href="https://github.githubassets.com/"&gt;
+    &lt;link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/74671357/ws?session=eyJ2IjoiVjMiLCJ1Ijo3NDY3MTM1NywicyI6NjExNjc4NzgzLCJjIjoyMjY2NzU4MDIzLCJ0IjoxNjA1OTg2NzMxfQ==--185d185e8cfe1f44fe81d741afa4476be4a28eda9a4e5155976bf1af47525160" data-refresh-url="/_alive"&gt;
+  &lt;link rel="sudo-modal" href="/sessions/sudo_modal"&gt;
+
+  &lt;meta name="request-id" content="FE84:137AA:2535ECE:331AC02:5FB969AA" data-pjax-transient="true"&gt;&lt;meta name="html-safe-nonce" content="f8c010b2777e48b3c47acd36a894ecef4b3d357d673e8309b1e84bf05c966eef" data-pjax-transient="true"&gt;&lt;meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9BdXRvVGVzdDkxL0Rlc2FmaW8vaXNzdWVzLzEzIiwicmVxdWVzdF9pZCI6IkZFODQ6MTM3QUE6MjUzNUVDRTozMzFBQzAyOjVGQjk2OUFBIiwidmlzaXRvcl9pZCI6IjgxODI1NDM3MzE1MzQ5OTU0NSIsInJlZ2lvbl9lZGdlIjoiZnJhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true"&gt;&lt;meta name="visitor-hmac" content="415933e7f3b904b655679fe95aeea091f61d6944886b598526a86fa3d6fc1273" data-pjax-transient="true"&gt;&lt;meta name="cookie-consent-required" content="true"&gt;
+
+    &lt;meta name="hovercard-subject-tag" content="repository:314789562" data-pjax-transient=""&gt;
+
+
+  &lt;meta name="github-keyboard-shortcuts" content="repository,issues" data-pjax-transient="true"&gt;
+
+  
+
+  &lt;meta name="selected-link" value="repo_issues" data-pjax-transient=""&gt;
+
+    &lt;meta name="google-site-verification" content="c1kuD-K2HIVF635lypcsWPoD4kilo5-jA_wBFyT4uMY"&gt;
+  &lt;meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU"&gt;
+  &lt;meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA"&gt;
+  &lt;meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc"&gt;
+
+  &lt;meta name="octolytics-host" content="collector.githubapp.com"&gt;&lt;meta name="octolytics-app-id" content="github"&gt;&lt;meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"&gt;&lt;meta name="octolytics-actor-id" content="74671357"&gt;&lt;meta name="octolytics-actor-login" content="AutoTest91"&gt;&lt;meta name="octolytics-actor-hash" content="ecf07a7c6c6173e2ff68583324fcfcc0c5da9f9d14a1eea2d681072f3b46c0f5"&gt;
+
+  &lt;meta name="analytics-location-query-strip" content="true" data-pjax-transient="true"&gt;&lt;meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/issues/index" data-pjax-transient="true"&gt;
+
+  
+
+
+
+
+
+
+  
+
+      &lt;meta name="hostname" content="github.com"&gt;
+    &lt;meta name="user-login" content="AutoTest91"&gt;
+
+
+      &lt;meta name="expected-hostname" content="github.com"&gt;
+
+      &lt;meta name="js-proxy-site-detection-payload" content="OGIwNWQwM2VmMTZlMGRlNzMzMmIzYzc3NjA3NmE5YWQ4Mjg5MjQwYmEzYWUzZWZjOGJmNGY1NTgwMjVhYjk1Mnx7InJlbW90ZV9hZGRyZXNzIjoiMTc2Ljc5LjE3OS4xNjQiLCJyZXF1ZXN0X2lkIjoiRkU4NDoxMzdBQToyNTM1RUNFOjMzMUFDMDI6NUZCOTY5QUEiLCJ0aW1lc3RhbXAiOjE2MDU5ODY3MzEsImhvc3QiOiJnaXRodWIuY29tIn0="&gt;
+
+    &lt;meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,JS_HTTP_CACHE_HEADERS"&gt;
+
+  &lt;meta http-equiv="x-pjax-version" content="97cc571b3dd1a89a7bf4ebbb57475cdf2453124b61b6049835fdafc53483bc00"&gt;
+  
+
+        &lt;link href="https://github.com/AutoTest91/Desafio/commits/main.atom" rel="alternate" title="Recent Commits to Desafio:main" type="application/atom+xml"&gt;
+
+  &lt;meta name="go-import" content="github.com/AutoTest91/Desafio git https://github.com/AutoTest91/Desafio.git"&gt;
+
+  &lt;meta name="octolytics-dimension-user_id" content="74671357"&gt;&lt;meta name="octolytics-dimension-user_login" content="AutoTest91"&gt;&lt;meta name="octolytics-dimension-repository_id" content="314789562"&gt;&lt;meta name="octolytics-dimension-repository_nwo" content="AutoTest91/Desafio"&gt;&lt;meta name="octolytics-dimension-repository_public" content="true"&gt;&lt;meta name="octolytics-dimension-repository_is_fork" content="false"&gt;&lt;meta name="octolytics-dimension-repository_network_root_id" content="314789562"&gt;&lt;meta name="octolytics-dimension-repository_network_root_nwo" content="AutoTest91/Desafio"&gt;&lt;meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="true"&gt;
+
+
+
+
+  &lt;meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats"&gt;
+
+  &lt;meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors"&gt;
+
+  &lt;meta name="browser-optimizely-client-errors-url" content="https://api.github.com/_private/browser/optimizely_client/errors"&gt;
+
+  &lt;link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000"&gt;
+  &lt;link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png"&gt;
+  &lt;link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg"&gt;
+
+&lt;meta name="theme-color" content="#1e2327"&gt;
+
+
+  &lt;link rel="manifest" href="/manifest.json" crossorigin="use-credentials"&gt;
+
+  &lt;/head&gt;
+
+  &lt;body class="logged-in env-production page-responsive"&gt;
+    
+
+    &lt;div class="position-relative js-header-wrapper "&gt;
+      &lt;a href="#start-of-content" class="p-3 bg-blue text-white show-on-focus js-skip-to-content"&gt;Skip to content&lt;/a&gt;
+      &lt;span class="progress-pjax-loader width-full js-pjax-loader-bar Progress position-fixed"&gt;
+    &lt;span style="background-color: #79b8ff;width: 0%;" class="Progress-item progress-pjax-loader-bar "&gt;&lt;/span&gt;
+&lt;/span&gt;      
+      
+
+
+            &lt;header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap" role="banner"&gt;
+    &lt;div class="Header-item mt-n1 mb-n1  d-none d-md-flex"&gt;
+      &lt;a class="Header-link " href="https://github.com/" data-hotkey="g d" aria-label="Homepage " data-ga-click="Header, go to dashboard, icon:logo"&gt;
+  &lt;svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="Header-item d-md-none"&gt;
+      &lt;button class="Header-link btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false"&gt;
+        &lt;svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex"&gt;
+          &lt;div class="header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to" role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="false"&gt;
+  &lt;div class="position-relative"&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="314789562" data-scoped-search-url="/AutoTest91/Desafio/search" data-unscoped-search-url="/search" action="/AutoTest91/Desafio/search" accept-charset="UTF-8" method="get"&gt;
+      &lt;label class="form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center"&gt;
+        &lt;input type="text" class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" value="" placeholder="Search or jump to…" data-unscoped-placeholder="Search or jump to…" data-scoped-placeholder="Search or jump to…" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" aria-label="Search or jump to…" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" spellcheck="false" autocomplete="off"&gt;
+          &lt;input type="hidden" value="N5ZXfkLhdu/Q5vrItAnTPi48g3QewDppDP1HRJYFYiXc2w3lTBrWl8VitPrlk6wxCesw3b/tUgHXlEZGvNn/XA==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf"&gt;
+          &lt;input type="hidden" class="js-site-search-type-field" name="type"&gt;
+            &lt;img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash"&gt;
+
+            &lt;div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container"&gt;
+              
+&lt;ul class="d-none js-jump-to-suggestions-template-container"&gt;
+  
+
+&lt;li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option"&gt;
+  &lt;a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href=""&gt;
+    &lt;div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none"&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+
+    &lt;img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28"&gt;
+
+    &lt;div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search"&gt;
+      &lt;span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository"&gt;
+        In this repository
+      &lt;/span&gt;
+      &lt;span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub"&gt;
+        All GitHub
+      &lt;/span&gt;
+      &lt;span aria-hidden="true" class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump"&gt;
+      Jump to
+      &lt;span class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;ul class="d-none js-jump-to-no-results-template-container"&gt;
+  &lt;li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2"&gt;
+    &lt;span class="text-gray"&gt;No suggested jump to results&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container"&gt;
+  
+
+&lt;li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option"&gt;
+  &lt;a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href=""&gt;
+    &lt;div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none"&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+
+    &lt;img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28"&gt;
+
+    &lt;div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search"&gt;
+      &lt;span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository"&gt;
+        In this repository
+      &lt;/span&gt;
+      &lt;span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub"&gt;
+        All GitHub
+      &lt;/span&gt;
+      &lt;span aria-hidden="true" class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump"&gt;
+      Jump to
+      &lt;span class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+
+  
+
+&lt;li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option"&gt;
+  &lt;a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href=""&gt;
+    &lt;div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none"&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"&gt;&lt;path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+
+    &lt;img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28"&gt;
+
+    &lt;div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search"&gt;
+      &lt;span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository"&gt;
+        In this repository
+      &lt;/span&gt;
+      &lt;span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub"&gt;
+        All GitHub
+      &lt;/span&gt;
+      &lt;span aria-hidden="true" class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump"&gt;
+      Jump to
+      &lt;span class="d-inline-block ml-1 v-align-middle"&gt;↵&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+
+
+    &lt;li class="d-flex flex-justify-center flex-items-center p-0 f5 js-jump-to-suggestion"&gt;
+      &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="m-3" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+            &lt;/div&gt;
+      &lt;/label&gt;
+&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;nav class="d-flex flex-column flex-md-row flex-self-stretch flex-md-self-auto" aria-label="Global"&gt;
+      &lt;a class="Header-link py-md-3 d-block d-md-none py-2 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard"&gt;
+        Dashboard
+&lt;/a&gt;
+    &lt;a class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="/pulls"&gt;
+        Pull&lt;span class="d-inline d-md-none d-lg-inline"&gt; request&lt;/span&gt;s
+&lt;/a&gt;
+    &lt;a class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="/issues"&gt;
+      Issues
+&lt;/a&gt;
+
+      &lt;div class="d-flex position-relative"&gt;
+        &lt;a class="js-selected-navigation-item Header-link flex-auto mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="/marketplace"&gt;
+          Marketplace
+&lt;/a&gt;        
+
+      &lt;/div&gt;
+
+    &lt;a class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore"&gt;
+      Explore
+&lt;/a&gt;
+
+
+    &lt;a class="Header-link d-block d-md-none mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" href="/settings/profile"&gt;
+      Settings
+&lt;/a&gt;
+    &lt;a class="Header-link d-block d-md-none mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" href="/AutoTest91"&gt;
+      &lt;img class="avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+      AutoTest91
+&lt;/a&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form action="/logout" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="k5JS5Wy0HxnN0hcJ7zHa5uEKjuyKBxKJvAqT7nX3T5PqJXlTYgntXf2DLxoc7C5g2GJYqI9BBqvH0rfJw0LPUQ=="&gt;
+      &lt;button type="submit" class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15 d-md-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;"&gt;
+        &lt;svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        Sign out
+      &lt;/button&gt;
+&lt;/form&gt;&lt;/nav&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="Header-item Header-item--full flex-justify-center d-md-none position-relative"&gt;
+      &lt;a class="Header-link " href="https://github.com/" data-hotkey="g d" aria-label="Homepage " data-ga-click="Header, go to dashboard, icon:logo"&gt;
+  &lt;svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="Header-item mr-0 mr-md-3 flex-order-1 flex-md-order-none"&gt;
+      
+
+    &lt;notification-indicator class="js-socket-channel" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6NzQ2NzEzNTciLCJ0IjoxNjA1OTg2NzMxfQ==--17dc6a5b6a098650d37265fd5f8d7db1260e2e4440d470544c38f2d361a81f05" data-catalyst=""&gt;
+      &lt;a href="/notifications" class="Header-link notification-indicator position-relative tooltipped tooltipped-sw" aria-label="You have no unread notifications" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-target="notification-indicator.link"&gt;
+         &lt;span class="mail-status  " data-target="notification-indicator.modifier"&gt;&lt;/span&gt;
+         &lt;svg class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"&gt;&lt;/path&gt;&lt;path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/notification-indicator&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;div class="Header-item position-relative d-none d-md-flex"&gt;
+      &lt;details class="details-overlay details-reset"&gt;
+  &lt;summary class="Header-link" aria-label="Create new…" data-ga-click="Header, create new, icon:add" aria-haspopup="menu" role="button"&gt;
+      &lt;svg class="octicon octicon-plus" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;span class="dropdown-caret"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="dropdown-menu dropdown-menu-sw" role="menu"&gt;
+    
+&lt;a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository"&gt;
+  New repository
+&lt;/a&gt;
+
+  &lt;a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository"&gt;
+    Import repository
+  &lt;/a&gt;
+
+&lt;a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist"&gt;
+  New gist
+&lt;/a&gt;
+
+  &lt;a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization"&gt;
+    New organization
+  &lt;/a&gt;
+
+
+  &lt;div role="none" class="dropdown-divider"&gt;&lt;/div&gt;
+  &lt;div class="dropdown-header"&gt;
+    &lt;span title="AutoTest91/Desafio"&gt;This repository&lt;/span&gt;
+  &lt;/div&gt;
+    &lt;a role="menuitem" class="dropdown-item" href="/AutoTest91/Desafio/issues/new/choose" data-ga-click="Header, create new issue" data-skip-pjax=""&gt;
+      New issue
+    &lt;/a&gt;
+
+
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="Header-item position-relative mr-0 d-none d-md-flex"&gt;
+        
+  &lt;details class="details-overlay details-reset js-feature-preview-indicator-container" data-feature-preview-indicator-src="/users/AutoTest91/feature_preview/indicator_check"&gt;
+
+  &lt;summary class="Header-link" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar" aria-haspopup="menu" role="button"&gt;
+    &lt;img alt="@AutoTest91" width="20" height="20" src="https://avatars2.githubusercontent.com/u/74671357?s=60&amp;amp;v=4" class="avatar avatar-user "&gt;
+
+      &lt;span class="feature-preview-indicator js-feature-preview-indicator" style="top: 1px;" hidden=""&gt;&lt;/span&gt;
+    &lt;span class="dropdown-caret"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="dropdown-menu dropdown-menu-sw" style="width: 180px" src="/users/74671357/menu" preload="" role="menu"&gt;
+      &lt;include-fragment&gt;
+        &lt;p class="text-center mt-3" data-hide-on-error=""&gt;
+          &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+        &lt;/p&gt;
+        &lt;p class="ml-1 mb-2 mt-2 text-gray-dark" data-show-on-error=""&gt;
+          &lt;svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+          Sorry, something went wrong.
+        &lt;/p&gt;
+      &lt;/include-fragment&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+    &lt;/div&gt;
+&lt;/header&gt;
+
+            
+    &lt;/div&gt;
+
+  &lt;div id="start-of-content" class="show-on-focus"&gt;&lt;/div&gt;
+
+
+
+
+
+    &lt;div data-pjax-replace="" id="js-flash-container"&gt;
+
+    &lt;div class="flash flash-full flash-notice "&gt;
+  &lt;div class=" px-2"&gt;
+    &lt;button class="flash-close js-flash-close" type="button" aria-label="Dismiss this message"&gt;
+      &lt;svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    
+      The issue was successfully deleted.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;template class="js-flash-template"&gt;
+    &lt;div class="flash flash-full  {{ className }}"&gt;
+  &lt;div class=" px-2"&gt;
+    &lt;button class="flash-close js-flash-close" type="button" aria-label="Dismiss this message"&gt;
+      &lt;svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    
+      &lt;div&gt;{{ message }}&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/template&gt;
+&lt;/div&gt;
+
+
+    
+
+  &lt;include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf"&gt;&lt;/include-fragment&gt;
+
+
+
+
+  &lt;div class="application-main " data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled=""&gt;
+        &lt;div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class=""&gt;
+    &lt;main id="js-repo-pjax-container" data-pjax-container=""&gt;
+      
+      
+
+        &lt;div class="border-bottom shelf intro-shelf js-notice mb-0 pb-4"&gt;
+  &lt;div class="width-full container"&gt;
+    &lt;div class="width-full mx-auto shelf-content"&gt;
+      &lt;h2 class="shelf-title"&gt;Learn Git and GitHub without any code!&lt;/h2&gt;
+      &lt;p class="shelf-lead"&gt;
+          Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+      &lt;/p&gt;
+      &lt;a class="btn btn-primary shelf-cta" target="_blank" data-hydro-click="{&amp;quot;event_type&amp;quot;:&amp;quot;repository.click&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;target&amp;quot;:&amp;quot;READ_GUIDE&amp;quot;,&amp;quot;repository_id&amp;quot;:314789562,&amp;quot;originating_url&amp;quot;:&amp;quot;https://github.com/AutoTest91/Desafio/issues&amp;quot;,&amp;quot;user_id&amp;quot;:74671357}}" data-hydro-click-hmac="732e1ec99974431378f705a1b181c4b37fbc32a94e068253ad461a6241226a38" href="https://guides.github.com/activities/hello-world/"&gt;Read the guide&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form class="shelf-dismiss js-notice-dismiss" action="/dashboard/dismiss_bootcamp" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="_method" value="delete"&gt;&lt;input type="hidden" name="authenticity_token" value="FaSK4vq1Lq32yYD4qxDa4hhaquCJGHfutkoAe0E8xJLD6PEg0+gFIQ19//JsUBRyrgYiShE/qMUcXadmiBw6rg=="&gt;
+      &lt;button name="button" type="submit" class="mr-1 close-button tooltipped tooltipped-w" aria-label="Hide this notice forever" data-hydro-click="{&amp;quot;event_type&amp;quot;:&amp;quot;repository.click&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;target&amp;quot;:&amp;quot;DISMISS_BANNER&amp;quot;,&amp;quot;repository_id&amp;quot;:314789562,&amp;quot;originating_url&amp;quot;:&amp;quot;https://github.com/AutoTest91/Desafio/issues&amp;quot;,&amp;quot;user_id&amp;quot;:74671357}}" data-hydro-click-hmac="00eb18b63d86203cff4d76c3f8f856b3d3ab6e23139ffdb6967ce4ac014c2209"&gt;
+        &lt;svg aria-label="Hide this notice forever" class="octicon octicon-x v-align-text-top" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/button&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+  
+
+
+  &lt;div class="bg-gray-light pt-3 hide-full-screen mb-5"&gt;
+
+      &lt;div class="d-flex mb-3 px-3 px-md-4 px-lg-5"&gt;
+
+        &lt;div class="flex-auto min-width-0 width-fit mr-3"&gt;
+            &lt;h1 class=" d-flex flex-wrap flex-items-center break-word f3 text-normal"&gt;
+    &lt;svg class="octicon octicon-repo text-gray mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;span class="author flex-self-stretch" itemprop="author"&gt;
+      &lt;a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91"&gt;AutoTest91&lt;/a&gt;
+    &lt;/span&gt;
+    &lt;span class="mx-1 flex-self-stretch color-text-secondary"&gt;/&lt;/span&gt;
+  &lt;strong itemprop="name" class="mr-2 flex-self-stretch"&gt;
+    &lt;a data-pjax="#js-repo-pjax-container" class="" href="/AutoTest91/Desafio"&gt;Desafio&lt;/a&gt;
+  &lt;/strong&gt;
+  
+&lt;/h1&gt;
+
+
+        &lt;/div&gt;
+
+          &lt;ul class="pagehead-actions flex-shrink-0 d-none d-md-inline" style="padding: 2px 0;"&gt;
+
+  &lt;li&gt;
+          &lt;notifications-list-subscription-form class="f5 position-relative d-flex" data-catalyst=""&gt;
+      &lt;details class="details-reset details-overlay f5 position-relative" data-target="notifications-list-subscription-form.details" data-action="toggle:notifications-list-subscription-form#detailsToggled"&gt;
+
+      &lt;summary class="btn btn-sm rounded-right-0" data-hydro-click="{&amp;quot;event_type&amp;quot;:&amp;quot;repository.click&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;target&amp;quot;:&amp;quot;WATCH_BUTTON&amp;quot;,&amp;quot;repository_id&amp;quot;:314789562,&amp;quot;originating_url&amp;quot;:&amp;quot;https://github.com/AutoTest91/Desafio/issues&amp;quot;,&amp;quot;user_id&amp;quot;:74671357}}" data-hydro-click-hmac="f0c958b2f3eb595ee8a952aa33c89100438dbdfccf1c735f02adbbe345c8ab48" data-ga-click="Repository, click Watch settings, action:issues#index" aria-label="Notifications settings" role="button" aria-haspopup="menu"&gt;
+          &lt;span data-menu-button=""&gt;
+            &lt;span data-target="notifications-list-subscription-form.unwatchButtonCopy"&gt;
+              &lt;svg class="octicon octicon-eye" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1.679 7.932c.412-.621 1.242-1.75 2.366-2.717C5.175 4.242 6.527 3.5 8 3.5c1.473 0 2.824.742 3.955 1.715 1.124.967 1.954 2.096 2.366 2.717a.119.119 0 010 .136c-.412.621-1.242 1.75-2.366 2.717C10.825 11.758 9.473 12.5 8 12.5c-1.473 0-2.824-.742-3.955-1.715C2.92 9.818 2.09 8.69 1.679 8.068a.119.119 0 010-.136zM8 2c-1.981 0-3.67.992-4.933 2.078C1.797 5.169.88 6.423.43 7.1a1.619 1.619 0 000 1.798c.45.678 1.367 1.932 2.637 3.024C4.329 13.008 6.019 14 8 14c1.981 0 3.67-.992 4.933-2.078 1.27-1.091 2.187-2.345 2.637-3.023a1.619 1.619 0 000-1.798c-.45-.678-1.367-1.932-2.637-3.023C11.671 2.992 9.981 2 8 2zm0 8a2 2 0 100-4 2 2 0 000 4z"&gt;&lt;/path&gt;&lt;/svg&gt;
+              Unwatch
+            &lt;/span&gt;
+            &lt;span hidden="" data-target="notifications-list-subscription-form.stopIgnoringButtonCopy"&gt;
+              &lt;svg class="octicon octicon-bell-slash" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5c-.997 0-1.895.416-2.534 1.086A.75.75 0 014.38 1.55 5 5 0 0113 5v2.373a.75.75 0 01-1.5 0V5A3.5 3.5 0 008 1.5zM4.182 4.31L1.19 2.143a.75.75 0 10-.88 1.214L3 5.305v2.642a.25.25 0 01-.042.139L1.255 10.64A1.518 1.518 0 002.518 13h11.108l1.184.857a.75.75 0 10.88-1.214l-1.375-.996a1.196 1.196 0 00-.013-.01L4.198 4.321a.733.733 0 00-.016-.011zm7.373 7.19L4.5 6.391v1.556c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01.015.015 0 00.005.012.017.017 0 00.006.004l.007.001h9.037zM8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"&gt;&lt;/path&gt;&lt;/svg&gt;
+              Stop ignoring
+            &lt;/span&gt;
+            &lt;span hidden="" data-target="notifications-list-subscription-form.watchButtonCopy"&gt;
+              &lt;svg class="octicon octicon-eye" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1.679 7.932c.412-.621 1.242-1.75 2.366-2.717C5.175 4.242 6.527 3.5 8 3.5c1.473 0 2.824.742 3.955 1.715 1.124.967 1.954 2.096 2.366 2.717a.119.119 0 010 .136c-.412.621-1.242 1.75-2.366 2.717C10.825 11.758 9.473 12.5 8 12.5c-1.473 0-2.824-.742-3.955-1.715C2.92 9.818 2.09 8.69 1.679 8.068a.119.119 0 010-.136zM8 2c-1.981 0-3.67.992-4.933 2.078C1.797 5.169.88 6.423.43 7.1a1.619 1.619 0 000 1.798c.45.678 1.367 1.932 2.637 3.024C4.329 13.008 6.019 14 8 14c1.981 0 3.67-.992 4.933-2.078 1.27-1.091 2.187-2.345 2.637-3.023a1.619 1.619 0 000-1.798c-.45-.678-1.367-1.932-2.637-3.023C11.671 2.992 9.981 2 8 2zm0 8a2 2 0 100-4 2 2 0 000 4z"&gt;&lt;/path&gt;&lt;/svg&gt;
+              Watch
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class="dropdown-caret"&gt;&lt;/span&gt;
+&lt;/summary&gt;
+        &lt;details-menu class="SelectMenu  " role="menu" data-target="notifications-list-subscription-form.menu"&gt;
+          &lt;div class="SelectMenu-modal notifications-component-menu-modal"&gt;
+            &lt;header class="SelectMenu-header"&gt;
+              &lt;h3 class="SelectMenu-title"&gt;Notifications&lt;/h3&gt;
+              &lt;button class="SelectMenu-closeButton" type="button" aria-label="Close menu" data-action="click:notifications-list-subscription-form#closeMenu"&gt;
+                &lt;svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+              &lt;/button&gt;
+            &lt;/header&gt;
+
+            &lt;div class="SelectMenu-list"&gt;
+              &lt;form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="U8Y/kPrVltj0ubfhRk/qadmUbahPXW8kB6gBCtq8+i+5pTcUTWlz4z6s4E24iWLuUfIqMo2X/OQazuxG1FR8rw=="&gt;
+
+                &lt;input type="hidden" name="repository_id" value="314789562"&gt;
+
+                &lt;button type="submit" name="do" value="included" class="SelectMenu-item flex-items-start" role="menuitemradio" aria-checked="false" data-targets="notifications-list-subscription-form.subscriptionButtons"&gt;
+                  &lt;span class="f5"&gt;
+                    &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                  &lt;/span&gt;
+                  &lt;div&gt;
+                    &lt;div class="f5 text-bold"&gt;
+                      Participating and @mentions
+                    &lt;/div&gt;
+                    &lt;div class="text-small text-gray text-normal pb-1"&gt;
+                      Only receive notifications from this repo when participating or @mentioned.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/button&gt;
+
+                &lt;button type="submit" name="do" value="subscribed" class="SelectMenu-item flex-items-start" role="menuitemradio" aria-checked="true" data-targets="notifications-list-subscription-form.subscriptionButtons"&gt;
+                  &lt;span class="f5"&gt;
+                    &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                  &lt;/span&gt;
+                  &lt;div&gt;
+                    &lt;div class="f5 text-bold"&gt;
+                      All Activity
+                    &lt;/div&gt;
+                    &lt;div class="text-small text-gray text-normal pb-1"&gt;
+                      Notified of all notifications on this repo.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/button&gt;
+
+                &lt;button type="submit" name="do" value="ignore" class="SelectMenu-item flex-items-start" role="menuitemradio" aria-checked="false" data-targets="notifications-list-subscription-form.subscriptionButtons"&gt;
+                  &lt;span class="f5"&gt;
+                    &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                  &lt;/span&gt;
+                  &lt;div&gt;
+                    &lt;div class="f5 text-bold"&gt;
+                      Ignore
+                    &lt;/div&gt;
+                    &lt;div class="text-small text-gray text-normal pb-1"&gt;
+                      Never be notified.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/button&gt;
+&lt;/form&gt;
+              &lt;button class="SelectMenu-item flex-items-start pr-3" type="button" role="menuitemradio" data-target="notifications-list-subscription-form.customButton" data-action="click:notifications-list-subscription-form#openCustomDialog" aria-haspopup="true" aria-checked="false"&gt;
+                &lt;span class="f5"&gt;
+                  &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;div&gt;
+                  &lt;div class="d-flex flex-items-start flex-justify-between"&gt;
+                    &lt;div class="f5 text-bold"&gt;Custom&lt;/div&gt;
+                    &lt;div class="f5 pr-1"&gt;
+                      &lt;svg class="octicon octicon-arrow-right" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="text-small text-gray text-normal pb-1"&gt;
+                    Select events you want to be notified of in addition to participating and @mentions.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/details-menu&gt;
+
+        &lt;details-dialog class="notifications-component-dialog " data-target="notifications-list-subscription-form.customDialog" hidden="" role="dialog" aria-modal="true"&gt;
+          &lt;div class="SelectMenu-modal notifications-component-dialog-modal overflow-visible"&gt;
+            &lt;form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="R3ZyXTA/rNPWI1WPHN7IEEI/kjn7zJZQkMdnwgz18r2tFXrZh4NJ6Bw2AiPiGECXylnVozkGBZCNoYqOAh10PQ=="&gt;
+
+              &lt;input type="hidden" name="repository_id" value="314789562"&gt;
+
+              &lt;header class="d-sm-none SelectMenu-header pb-0 border-bottom-0 px-2 px-sm-3"&gt;
+                &lt;h1 class="f3 SelectMenu-title d-inline-flex"&gt;
+                  &lt;button class="bg-white border-0 px-2 py-0 m-0 link-gray f5" aria-label="Return to menu" type="button" data-action="click:notifications-list-subscription-form#closeCustomDialog"&gt;
+                    &lt;svg style="" class="octicon octicon-arrow-left" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                  &lt;/button&gt;
+                  Custom
+                &lt;/h1&gt;
+              &lt;/header&gt;
+
+              &lt;header class="d-none d-sm-flex flex-items-start pt-1"&gt;
+                &lt;button class="bg-white border-0 px-2 pt-1 m-0 link-gray f5" aria-label="Return to menu" type="button" data-action="click:notifications-list-subscription-form#closeCustomDialog"&gt;
+                  &lt;svg style="position: relative; left: 2px; top: 1px" class="octicon octicon-arrow-left" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                &lt;/button&gt;
+
+                &lt;h1 class="pt-1 pr-4 pb-0 pl-0 f5 text-bold"&gt;
+                  Custom
+                &lt;/h1&gt;
+              &lt;/header&gt;
+
+              &lt;fieldset&gt;
+                &lt;legend&gt;
+                  &lt;div class="text-small text-gray pt-0 pr-3 pb-3 pl-6 pl-sm-5 border-bottom mb-3"&gt;
+                    Select events you want to be notified of in addition to participating and @mentions.
+                  &lt;/div&gt;
+                &lt;/legend&gt;
+                  &lt;div class="form-checkbox mr-3 ml-6 ml-sm-5 mb-2 mt-0"&gt;
+                    &lt;label class="f5 text-normal"&gt;
+                      &lt;input type="checkbox" name="thread_types[]" value="Issue" data-targets="notifications-list-subscription-form.threadTypeCheckboxes" data-action="change:notifications-list-subscription-form#threadTypeCheckboxesUpdated" autofocus=""&gt;
+                      Issues
+                    &lt;/label&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class="form-checkbox mr-3 ml-6 ml-sm-5 mb-2 mt-0"&gt;
+                    &lt;label class="f5 text-normal"&gt;
+                      &lt;input type="checkbox" name="thread_types[]" value="PullRequest" data-targets="notifications-list-subscription-form.threadTypeCheckboxes" data-action="change:notifications-list-subscription-form#threadTypeCheckboxesUpdated"&gt;
+                      Pull requests
+                    &lt;/label&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class="form-checkbox mr-3 ml-6 ml-sm-5 mb-2 mt-0"&gt;
+                    &lt;label class="f5 text-normal"&gt;
+                      &lt;input type="checkbox" name="thread_types[]" value="Release" data-targets="notifications-list-subscription-form.threadTypeCheckboxes" data-action="change:notifications-list-subscription-form#threadTypeCheckboxesUpdated"&gt;
+                      Releases
+                    &lt;/label&gt;
+
+                  &lt;/div&gt;
+              &lt;/fieldset&gt;
+              &lt;div class="pt-2 pb-3 px-3 d-flex flex-justify-start flex-row-reverse"&gt;
+                &lt;button type="submit" name="do" value="custom" class="btn btn-sm btn-primary ml-2" data-target="notifications-list-subscription-form.customSubmit" disabled=""&gt;Apply&lt;/button&gt;
+
+                &lt;button class="btn btn-sm" type="button" data-action="click:notifications-list-subscription-form#resetForm" data-close-dialog=""&gt;Cancel&lt;/button&gt;
+              &lt;/div&gt;
+&lt;/form&gt;          &lt;/div&gt;
+        &lt;/details-dialog&gt;
+        &lt;div class="notifications-component-dialog-overlay"&gt;&lt;/div&gt;
+      &lt;/details&gt;
+        &lt;a class="social-count" href="/AutoTest91/Desafio/watchers" aria-label="1 user is watching this repository" data-target="notifications-list-subscription-form.socialCount"&gt;
+          1
+        &lt;/a&gt;
+
+    &lt;/notifications-list-subscription-form&gt;
+
+  &lt;/li&gt;
+
+  &lt;li&gt;
+        &lt;div class="d-block js-toggler-container js-social-container starring-container "&gt;
+    &lt;form class="starred js-social-form" action="/AutoTest91/Desafio/unstar" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="yqgvG59+FOcS3L03KeIO1nwiMnFlWUZlklTKhj7eOxYhL7sQgrhfaD9l7EJA7Z+g8oWQLyzOaI+6GMZCNXu+tw=="&gt;
+      &lt;input type="hidden" name="context" value="repository"&gt;
+      &lt;button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar AutoTest91/Desafio" data-hydro-click="{&amp;quot;event_type&amp;quot;:&amp;quot;repository.click&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;target&amp;quot;:&amp;quot;UNSTAR_BUTTON&amp;quot;,&amp;quot;repository_id&amp;quot;:314789562,&amp;quot;originating_url&amp;quot;:&amp;quot;https://github.com/AutoTest91/Desafio/issues&amp;quot;,&amp;quot;user_id&amp;quot;:74671357}}" data-hydro-click-hmac="c8838dd41674cf56c7fbb208265a7fffc3f460457d4b43205b740464702b8576" data-ga-click="Repository, click unstar button, action:issues#index; text:Unstar"&gt;        &lt;svg class="octicon octicon-star-fill" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        Unstar
+&lt;/button&gt;        &lt;a class="social-count js-social-count" href="/AutoTest91/Desafio/stargazers" aria-label="0 users starred this repository"&gt;
+           0
+        &lt;/a&gt;
+&lt;/form&gt;
+    &lt;form class="unstarred js-social-form" action="/AutoTest91/Desafio/star" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="V3rC5TiJ9EPeINpu+YF0giOVhEzc4+ZgJ1KfkpWPJY18sgReKEixhG+ymGJXDDpHeooSMboomE2HtsGAg0hl7Q=="&gt;
+      &lt;input type="hidden" name="context" value="repository"&gt;
+      &lt;button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star AutoTest91/Desafio" data-hydro-click="{&amp;quot;event_type&amp;quot;:&amp;quot;repository.click&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;target&amp;quot;:&amp;quot;STAR_BUTTON&amp;quot;,&amp;quot;repository_id&amp;quot;:314789562,&amp;quot;originating_url&amp;quot;:&amp;quot;https://github.com/AutoTest91/Desafio/issues&amp;quot;,&amp;quot;user_id&amp;quot;:74671357}}" data-hydro-click-hmac="4325fb20d3450119df524de58c0379573b21a9d8c74c194d0565f94c58a0bbb1" data-ga-click="Repository, click star button, action:issues#index; text:Star"&gt;        &lt;svg class="octicon octicon-star" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        Star
+&lt;/button&gt;        &lt;a class="social-count js-social-count" href="/AutoTest91/Desafio/stargazers" aria-label="0 users starred this repository"&gt;
+          0
+        &lt;/a&gt;
+&lt;/form&gt;  &lt;/div&gt;
+
+  &lt;/li&gt;
+
+  &lt;li&gt;
+          &lt;span class="btn btn-sm btn-with-count disabled tooltipped tooltipped-sw" aria-label="Cannot fork because you own this repository and are not a member of any organizations."&gt;
+            &lt;svg class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            Fork
+&lt;/span&gt;
+      &lt;a href="/AutoTest91/Desafio/network/members" class="social-count" aria-label="0 users forked this repository"&gt;
+        0
+      &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+      &lt;/div&gt;
+        
+&lt;nav aria-label="Repository" data-pjax="#js-repo-pjax-container" class="js-repo-nav js-sidenav-container-pjax js-responsive-underlinenav overflow-hidden UnderlineNav px-3 px-md-4 px-lg-5 bg-gray-light"&gt;
+  &lt;ul class="UnderlineNav-body list-style-none "&gt;
+          &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="code-tab" data-hotkey="g c" data-ga-click="Repository, Navigation click, Code tab" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments /AutoTest91/Desafio" href="/AutoTest91/Desafio"&gt;
+              &lt;svg class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Code"&gt;Code&lt;/span&gt;
+              &lt;span title="Not available" class="Counter "&gt;&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item selected UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="issues-tab" data-hotkey="g i" data-ga-click="Repository, Navigation click, Issues tab" aria-current="page" data-selected-links="repo_issues repo_labels repo_milestones /AutoTest91/Desafio/issues" href="/AutoTest91/Desafio/issues"&gt;
+              &lt;svg class="octicon octicon-issue-opened UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Issues"&gt;Issues&lt;/span&gt;
+              &lt;span title="5" class="Counter "&gt;5&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="pull-requests-tab" data-hotkey="g p" data-ga-click="Repository, Navigation click, Pull requests tab" data-selected-links="repo_pulls checks /AutoTest91/Desafio/pulls" href="/AutoTest91/Desafio/pulls"&gt;
+              &lt;svg class="octicon octicon-git-pull-request UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Pull requests"&gt;Pull requests&lt;/span&gt;
+              &lt;span title="0" hidden="hidden" class="Counter "&gt;0&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="actions-tab" data-hotkey="g a" data-ga-click="Repository, Navigation click, Actions tab" data-selected-links="repo_actions /AutoTest91/Desafio/actions" href="/AutoTest91/Desafio/actions"&gt;
+              &lt;svg class="octicon octicon-play UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM6.379 5.227A.25.25 0 006 5.442v5.117a.25.25 0 00.379.214l4.264-2.559a.25.25 0 000-.428L6.379 5.227z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Actions"&gt;Actions&lt;/span&gt;
+              &lt;span title="Not available" class="Counter "&gt;&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="projects-tab" data-hotkey="g b" data-ga-click="Repository, Navigation click, Projects tab" data-selected-links="repo_projects new_repo_project repo_project /AutoTest91/Desafio/projects" href="/AutoTest91/Desafio/projects"&gt;
+              &lt;svg class="octicon octicon-project UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Projects"&gt;Projects&lt;/span&gt;
+              &lt;span title="1" class="Counter "&gt;1&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="wiki-tab" data-hotkey="g w" data-ga-click="Repository, Navigation click, Wikis tab" data-selected-links="repo_wiki /AutoTest91/Desafio/wiki" href="/AutoTest91/Desafio/wiki"&gt;
+              &lt;svg class="octicon octicon-book UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Wiki"&gt;Wiki&lt;/span&gt;
+              &lt;span title="Not available" class="Counter "&gt;&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="security-tab" data-hotkey="g s" data-ga-click="Repository, Navigation click, Security tab" data-selected-links="security overview alerts policy token_scanning code_scanning /AutoTest91/Desafio/security" href="/AutoTest91/Desafio/security"&gt;
+              &lt;svg class="octicon octicon-shield UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.467.133a1.75 1.75 0 011.066 0l5.25 1.68A1.75 1.75 0 0115 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.7 1.7 0 01-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 011.217-1.667l5.25-1.68zm.61 1.429a.25.25 0 00-.153 0l-5.25 1.68a.25.25 0 00-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.2.2 0 00.154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.25.25 0 00-.174-.237l-5.25-1.68zM9 10.5a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.75a.75.75 0 10-1.5 0v3a.75.75 0 001.5 0v-3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Security"&gt;Security&lt;/span&gt;
+              
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="insights-tab" data-ga-click="Repository, Navigation click, Insights tab" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people /AutoTest91/Desafio/pulse" href="/AutoTest91/Desafio/pulse"&gt;
+              &lt;svg class="octicon octicon-graph UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Insights"&gt;Insights&lt;/span&gt;
+              &lt;span title="Not available" class="Counter "&gt;&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+      &lt;li class="d-flex"&gt;
+        &lt;a class="js-selected-navigation-item UnderlineNav-item hx_underlinenav-item no-wrap js-responsive-underlinenav-item" data-tab-item="settings-tab" data-ga-click="Repository, Navigation click, Settings tab" data-selected-links="repo_settings repo_branch_settings hooks integration_installations repo_keys_settings issue_template_editor secrets_settings key_links_settings repo_actions_settings notifications /AutoTest91/Desafio/settings" href="/AutoTest91/Desafio/settings"&gt;
+              &lt;svg class="octicon octicon-gear UnderlineNav-octicon d-none d-sm-inline" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.429 1.525a6.593 6.593 0 011.142 0c.036.003.108.036.137.146l.289 1.105c.147.56.55.967.997 1.189.174.086.341.183.501.29.417.278.97.423 1.53.27l1.102-.303c.11-.03.175.016.195.046.219.31.41.641.573.989.014.031.022.11-.059.19l-.815.806c-.411.406-.562.957-.53 1.456a4.588 4.588 0 010 .582c-.032.499.119 1.05.53 1.456l.815.806c.08.08.073.159.059.19a6.494 6.494 0 01-.573.99c-.02.029-.086.074-.195.045l-1.103-.303c-.559-.153-1.112-.008-1.529.27-.16.107-.327.204-.5.29-.449.222-.851.628-.998 1.189l-.289 1.105c-.029.11-.101.143-.137.146a6.613 6.613 0 01-1.142 0c-.036-.003-.108-.037-.137-.146l-.289-1.105c-.147-.56-.55-.967-.997-1.189a4.502 4.502 0 01-.501-.29c-.417-.278-.97-.423-1.53-.27l-1.102.303c-.11.03-.175-.016-.195-.046a6.492 6.492 0 01-.573-.989c-.014-.031-.022-.11.059-.19l.815-.806c.411-.406.562-.957.53-1.456a4.587 4.587 0 010-.582c.032-.499-.119-1.05-.53-1.456l-.815-.806c-.08-.08-.073-.159-.059-.19a6.44 6.44 0 01.573-.99c.02-.029.086-.075.195-.045l1.103.303c.559.153 1.112.008 1.529-.27.16-.107.327-.204.5-.29.449-.222.851-.628.998-1.189l.289-1.105c.029-.11.101-.143.137-.146zM8 0c-.236 0-.47.01-.701.03-.743.065-1.29.615-1.458 1.261l-.29 1.106c-.017.066-.078.158-.211.224a5.994 5.994 0 00-.668.386c-.123.082-.233.09-.3.071L3.27 2.776c-.644-.177-1.392.02-1.82.63a7.977 7.977 0 00-.704 1.217c-.315.675-.111 1.422.363 1.891l.815.806c.05.048.098.147.088.294a6.084 6.084 0 000 .772c.01.147-.038.246-.088.294l-.815.806c-.474.469-.678 1.216-.363 1.891.2.428.436.835.704 1.218.428.609 1.176.806 1.82.63l1.103-.303c.066-.019.176-.011.299.071.213.143.436.272.668.386.133.066.194.158.212.224l.289 1.106c.169.646.715 1.196 1.458 1.26a8.094 8.094 0 001.402 0c.743-.064 1.29-.614 1.458-1.26l.29-1.106c.017-.066.078-.158.211-.224a5.98 5.98 0 00.668-.386c.123-.082.233-.09.3-.071l1.102.302c.644.177 1.392-.02 1.82-.63.268-.382.505-.789.704-1.217.315-.675.111-1.422-.364-1.891l-.814-.806c-.05-.048-.098-.147-.088-.294a6.1 6.1 0 000-.772c-.01-.147.039-.246.088-.294l.814-.806c.475-.469.679-1.216.364-1.891a7.992 7.992 0 00-.704-1.218c-.428-.609-1.176-.806-1.82-.63l-1.103.303c-.066.019-.176.011-.299-.071a5.991 5.991 0 00-.668-.386c-.133-.066-.194-.158-.212-.224L10.16 1.29C9.99.645 9.444.095 8.701.031A8.094 8.094 0 008 0zm1.5 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM11 8a3 3 0 11-6 0 3 3 0 016 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span data-content="Settings"&gt;Settings&lt;/span&gt;
+              &lt;span title="Not available" class="Counter "&gt;&lt;/span&gt;
+&lt;/a&gt;      &lt;/li&gt;
+
+&lt;/ul&gt;        &lt;div class="position-absolute right-0 pr-3 pr-md-4 pr-lg-5 js-responsive-underlinenav-overflow" style="visibility:hidden;"&gt;
+      &lt;details class="details-overlay details-reset position-relative"&gt;
+  &lt;summary role="button"&gt;
+    &lt;div class="UnderlineNav-item mr-0 border-0"&gt;
+            &lt;svg class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span class="sr-only"&gt;More&lt;/span&gt;
+          &lt;/div&gt;
+&lt;/summary&gt;  &lt;div&gt;
+    &lt;details-menu role="menu" class="dropdown-menu dropdown-menu-sw "&gt;
+  
+            &lt;ul&gt;
+                &lt;li data-menu-item="code-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio" href="/AutoTest91/Desafio"&gt;
+                    Code
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="issues-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item selected dropdown-item" aria-current="page" data-selected-links=" /AutoTest91/Desafio/issues" href="/AutoTest91/Desafio/issues"&gt;
+                    Issues
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="pull-requests-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/pulls" href="/AutoTest91/Desafio/pulls"&gt;
+                    Pull requests
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="actions-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/actions" href="/AutoTest91/Desafio/actions"&gt;
+                    Actions
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="projects-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/projects" href="/AutoTest91/Desafio/projects"&gt;
+                    Projects
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="wiki-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/wiki" href="/AutoTest91/Desafio/wiki"&gt;
+                    Wiki
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="security-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/security" href="/AutoTest91/Desafio/security"&gt;
+                    Security
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="insights-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/pulse" href="/AutoTest91/Desafio/pulse"&gt;
+                    Insights
+&lt;/a&gt;                &lt;/li&gt;
+                &lt;li data-menu-item="settings-tab" hidden=""&gt;
+                  &lt;a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links=" /AutoTest91/Desafio/settings" href="/AutoTest91/Desafio/settings"&gt;
+                    Settings
+&lt;/a&gt;                &lt;/li&gt;
+            &lt;/ul&gt;
+
+&lt;/details-menu&gt;
+&lt;/div&gt;&lt;/details&gt;    &lt;/div&gt;
+
+&lt;/nav&gt;
+  &lt;/div&gt;
+
+
+&lt;div class="container-xl clearfix new-discussion-timeline px-3 px-md-4 px-lg-5"&gt;
+  &lt;div class="repository-content "&gt;
+
+    
+      
+    &lt;div class="js-check-all-container" data-pjax=""&gt;
+      
+    
+&lt;div class="mb-4 js-notice"&gt;
+  &lt;div class="content p-4 text-center rounded-1 border border-gray-light"&gt;
+    &lt;div class="position-relative"&gt;
+      &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form class="js-notice-dismiss" action="/settings/dismiss-notice/maintainer_label_education_banner" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="authenticity_token" value="8JqqS72tYFHxqUT++5Tgudk8H0taiIvhCgWCPyUpqwu23X47YHJaK+I1aV91ZYK7WPEFUJscyzX1b4PrqXwwWg=="&gt;
+        &lt;button name="button" type="submit" class="position-absolute top-0 right-0 btn-link text-blue" data-ga-click="Maintainer label education banner, dismiss, repository_nwo:AutoTest91/Desafio; context:issues; public:true; repo_has_help_wanted_label:true; repo_has_good_first_issue_label:true; shows_go_to_labels:false" data-octo-click="maintainer_label_education" data-octo-dimensions="action:click_dismiss,actor_id:74671357,user_id:74671357,repository_id:314789562,repository_nwo:AutoTest91/Desafio,context:issues,public:true,repo_has_help_wanted_label:true,repo_has_good_first_issue_label:true,shows_go_to_labels:false"&gt;Dismiss&lt;/button&gt;
+&lt;/form&gt;
+      &lt;div class="col-9 mx-auto"&gt;
+        &lt;h4 class="mb-1"&gt;
+          Label issues and pull requests for new contributors
+        &lt;/h4&gt;
+        &lt;p style="margin-bottom: 0px;" class="mb-1"&gt;
+          Now, GitHub will help potential first-time contributors
+          &lt;a href="/AutoTest91/Desafio/contribute" data-ga-click="Explore, go to Contribute, location:Maintainer label education banner"&gt;
+            discover issues
+          &lt;/a&gt; labeled with
+            &lt;a class="d-inline-block IssueLabel" style="background-color: #7057ff; color: #ffffff" data-ga-click="Maintainer label education banner, dismiss, repository_nwo:AutoTest91/Desafio; context:issues; label_name:good first issue; public:true; repo_has_help_wanted_label:true; repo_has_good_first_issue_label:true; shows_go_to_labels:false" data-octo-click="maintainer_label_education" data-octo-dimensions="action:click_label,actor_id:74671357,user_id:74671357,repository_id:314789562,repository_nwo:AutoTest91/Desafio,context:issues,label_name:good first issue,public:true,repo_has_help_wanted_label:true,repo_has_good_first_issue_label:true,shows_go_to_labels:false" title="Good for newcomers" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22"&gt;good first issue&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+  
+&lt;div class="d-flex flex-justify-between mb-md-3 flex-column-reverse flex-md-row flex-items-end"&gt;
+  &lt;div class="d-flex flex-justify-start flex-auto width-full my-4 my-md-0" role="search"&gt;
+      &lt;details class="details-reset details-overlay subnav-search-context" id="filters-select-menu"&gt;
+        &lt;summary class="btn" aria-haspopup="menu" role="button"&gt;
+          Filters
+          &lt;span class="dropdown-caret"&gt;&lt;/span&gt;
+        &lt;/summary&gt;
+        &lt;details-menu class="SelectMenu" role="menu"&gt;
+          &lt;div class="SelectMenu-modal"&gt;
+            &lt;div class="SelectMenu-header"&gt;
+              &lt;h3 class="SelectMenu-title"&gt;Filter Issues&lt;/h3&gt;
+              &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="filters-select-menu"&gt;
+                &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="SelectMenu-list"&gt;
+                &lt;a class="SelectMenu-item" role="menuitem" href="/AutoTest91/Desafio/issues?q=is%3Aopen" data-ga-click="Issues, Search filter, Open issues and pull requests"&gt;
+                  Open issues and pull requests
+                &lt;/a&gt;
+                &lt;a class="SelectMenu-item" role="menuitem" href="/AutoTest91/Desafio/issues?q=is%3Aopen+is%3Aissue+author%3A%40me" data-ga-click="Issues, Search filter, Your issues"&gt;
+                  Your issues
+                &lt;/a&gt;
+              &lt;a class="SelectMenu-item" role="menuitem" href="/AutoTest91/Desafio/issues?q=is%3Aopen+is%3Apr+author%3A%40me" data-ga-click="Issues, Search filter, Your pull requests"&gt;
+                Your pull requests
+              &lt;/a&gt;
+              &lt;a class="SelectMenu-item" role="menuitem" href="/AutoTest91/Desafio/issues?q=is%3Aopen+assignee%3A%40me" data-ga-click="Issues, Search filter, Everything assigned to you"&gt;
+                Everything assigned to you
+              &lt;/a&gt;
+              &lt;a class="SelectMenu-item" role="menuitem" href="/AutoTest91/Desafio/issues?q=is%3Aopen+mentions%3A%40me" data-ga-click="Issues, Search filter, Everything mentioning you"&gt;
+                Everything mentioning you
+              &lt;/a&gt;
+              &lt;a class="SelectMenu-item" role="menuitem" href="https://docs.github.com/articles/searching-issues" target="_blank"&gt;
+                &lt;svg class="octicon octicon-link-external mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                &lt;strong&gt;View advanced search syntax&lt;/strong&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/details-menu&gt;
+      &lt;/details&gt;
+
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form class="subnav-search width-full " data-pjax="true" role="search" aria-label="Issues" action="/AutoTest91/Desafio/issues" accept-charset="UTF-8" method="get"&gt;
+      &lt;input type="text" name="q" id="js-issues-search" value="is:issue is:open " class="form-control form-control subnav-search-input input-contrast width-full" placeholder="Search all issues" aria-label="Search all issues" data-hotkey="Control+/,Meta+/"&gt;
+      &lt;svg class="octicon octicon-search subnav-search-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/form&gt;    &lt;div class="ml-2 pl-2 d-none d-md-flex"&gt;
+      
+&lt;nav class="subnav-links float-left d-flex no-wrap" aria-label="Issue"&gt;
+  &lt;a selected_link="repo_issues" class="js-selected-navigation-item subnav-item" data-selected-links="repo_labels /AutoTest91/Desafio/labels" href="/AutoTest91/Desafio/labels"&gt;
+    &lt;svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    Labels
+      &lt;span title="9" class="Counter d-none d-md-inline"&gt;9&lt;/span&gt;
+&lt;/a&gt;  &lt;a selected_link="repo_issues" class="js-selected-navigation-item subnav-item" data-selected-links="repo_milestones /AutoTest91/Desafio/milestones" href="/AutoTest91/Desafio/milestones"&gt;
+    &lt;svg class="octicon octicon-milestone" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.75 0a.75.75 0 01.75.75V3h3.634c.414 0 .814.147 1.13.414l2.07 1.75a1.75 1.75 0 010 2.672l-2.07 1.75a1.75 1.75 0 01-1.13.414H8.5v5.25a.75.75 0 11-1.5 0V10H2.75A1.75 1.75 0 011 8.25v-3.5C1 3.784 1.784 3 2.75 3H7V.75A.75.75 0 017.75 0zm0 8.5h4.384a.25.25 0 00.161-.06l2.07-1.75a.25.25 0 000-.38l-2.07-1.75a.25.25 0 00-.161-.06H2.75a.25.25 0 00-.25.25v3.5c0 .138.112.25.25.25h5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    Milestones
+      &lt;span title="0" class="Counter d-none d-md-inline"&gt;0&lt;/span&gt;
+&lt;/a&gt;&lt;/nav&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ml-3 d-flex flex-justify-between width-full width-md-auto" data-pjax=""&gt;
+    &lt;span class="d-md-none"&gt;
+      
+&lt;nav class="subnav-links float-left d-flex no-wrap" aria-label="Issue"&gt;
+  &lt;a selected_link="repo_issues" class="js-selected-navigation-item subnav-item" data-selected-links="repo_labels /AutoTest91/Desafio/labels" href="/AutoTest91/Desafio/labels"&gt;
+    &lt;svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    Labels
+      &lt;span title="9" class="Counter d-none d-md-inline"&gt;9&lt;/span&gt;
+&lt;/a&gt;  &lt;a selected_link="repo_issues" class="js-selected-navigation-item subnav-item" data-selected-links="repo_milestones /AutoTest91/Desafio/milestones" href="/AutoTest91/Desafio/milestones"&gt;
+    &lt;svg class="octicon octicon-milestone" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M7.75 0a.75.75 0 01.75.75V3h3.634c.414 0 .814.147 1.13.414l2.07 1.75a1.75 1.75 0 010 2.672l-2.07 1.75a1.75 1.75 0 01-1.13.414H8.5v5.25a.75.75 0 11-1.5 0V10H2.75A1.75 1.75 0 011 8.25v-3.5C1 3.784 1.784 3 2.75 3H7V.75A.75.75 0 017.75 0zm0 8.5h4.384a.25.25 0 00.161-.06l2.07-1.75a.25.25 0 000-.38l-2.07-1.75a.25.25 0 00-.161-.06H2.75a.25.25 0 00-.25.25v3.5c0 .138.112.25.25.25h5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    Milestones
+      &lt;span title="0" class="Counter d-none d-md-inline"&gt;0&lt;/span&gt;
+&lt;/a&gt;&lt;/nav&gt;
+
+    &lt;/span&gt;
+            &lt;a href="/AutoTest91/Desafio/issues/new/choose" class="btn btn-primary" role="button" data-hotkey="c" data-skip-pjax=""&gt;
+              &lt;span class="d-none d-md-block"&gt;New issue&lt;/span&gt;
+              &lt;span class="d-block d-md-none"&gt;New&lt;/span&gt;
+            &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+  &lt;div class="d-block d-lg-none no-wrap"&gt;
+    
+&lt;div class="table-list-header-toggle states flex-auto pl-0"&gt;
+    &lt;a href="/AutoTest91/Desafio/issues?q=is%3Aopen+is%3Aissue" class="btn-link selected" data-ga-click="Issues, Table state, Open"&gt;
+      &lt;svg class="octicon octicon-issue-opened" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      5 Open
+    &lt;/a&gt;
+
+    &lt;a href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aclosed" class="btn-link " data-ga-click="Issues, Table state, Closed"&gt;
+      &lt;svg class="octicon octicon-check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      3 Closed
+    &lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class="Box mt-3 Box--responsive hx_Box--firstRowRounded0"&gt;
+      &lt;div class="Box-header d-flex flex-justify-between" id="js-issues-toolbar"&gt;
+    &lt;div class="mr-3 d-none d-md-block"&gt;
+      &lt;input type="checkbox" data-check-all="" aria-label="Select all issues" autocomplete="off"&gt;
+    &lt;/div&gt;
+
+  &lt;div class="table-list-filters flex-auto d-flex min-width-0"&gt;
+    &lt;div class="flex-auto d-none d-lg-block no-wrap"&gt;
+      
+&lt;div class="table-list-header-toggle states flex-auto pl-0"&gt;
+    &lt;a href="/AutoTest91/Desafio/issues?q=is%3Aopen+is%3Aissue" class="btn-link selected" data-ga-click="Issues, Table state, Open"&gt;
+      &lt;svg class="octicon octicon-issue-opened" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      5 Open
+    &lt;/a&gt;
+
+    &lt;a href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aclosed" class="btn-link " data-ga-click="Issues, Table state, Closed"&gt;
+      &lt;svg class="octicon octicon-check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      3 Closed
+    &lt;/a&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+
+      &lt;div class="table-list-header-toggle no-wrap d-flex flex-auto flex-justify-between flex-sm-justify-start flex-lg-justify-end"&gt;
+        
+  &lt;details class="details-reset details-overlay d-inline-block position-relative px-3" id="author-select-menu"&gt;
+    &lt;summary class="btn-link" title="Author" data-hotkey="u" aria-haspopup="menu" data-ga-click="Issues, Table filter, Author" role="button"&gt;
+      Author
+      &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+    &lt;/summary&gt;
+    &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-lg-0" role="menu" src="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ffilters%2Fauthors_content&amp;amp;q=is%3Aissue+is%3Aopen" preload=""&gt;
+      &lt;div class="SelectMenu-modal"&gt;
+        &lt;header class="SelectMenu-header"&gt;
+          &lt;span class="SelectMenu-title"&gt;Filter by author&lt;/span&gt;
+          &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="author-select-menu"&gt;
+            &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/header&gt;
+        &lt;div class="SelectMenu-filter"&gt;
+          &lt;input class="SelectMenu-input form-control js-filterable-field" id="author-filter-field" type="text" placeholder="Filter users" aria-label="Filter users" autocomplete="off" spellcheck="false" autofocus=""&gt;
+        &lt;/div&gt;
+        &lt;include-fragment class="SelectMenu-loading"&gt;
+          &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="mx-auto d-block" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+        &lt;/include-fragment&gt;
+      &lt;/div&gt;
+    &lt;/details-menu&gt;
+  &lt;/details&gt;
+
+          
+&lt;details class="details-reset details-overlay d-inline-block position-relative px-3" id="label-select-menu"&gt;
+  &lt;summary class="btn-link" title="Label" data-hotkey="l" aria-haspopup="menu" data-ga-click="Issues, Table filter, Label" role="button"&gt;
+    Label
+    &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-lg-0" role="menu" src="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ffilters%2Flabels_content&amp;amp;q=is%3Aissue+is%3Aopen" preload=""&gt;
+    &lt;div class="SelectMenu-modal"&gt;
+      &lt;header class="SelectMenu-header"&gt;
+        &lt;span class="SelectMenu-title"&gt;Filter by label&lt;/span&gt;
+        &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="label-select-menu"&gt;
+          &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class="SelectMenu-filter"&gt;
+        &lt;input type="text" id="label-filter-field" class="SelectMenu-input form-control js-filterable-field" placeholder="Filter labels" aria-label="Filter labels" autocomplete="off" autofocus=""&gt;
+      &lt;/div&gt;
+      &lt;include-fragment class="SelectMenu-loading"&gt;
+        &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="mx-auto d-block" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+      &lt;/include-fragment&gt;
+      &lt;footer class="SelectMenu-footer"&gt;
+        &lt;span&gt;Use &lt;kbd class="js-modifier-key"&gt;alt&lt;/kbd&gt; + &lt;kbd&gt;click/return&lt;/kbd&gt; to exclude labels.&lt;/span&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+            
+&lt;details class="details-reset details-overlay d-inline-block position-relative px-3" id="project-select-menu"&gt;
+  &lt;summary class="btn-link" data-hotkey="p" aria-haspopup="menu" data-ga-click="Issues, Table filter, Projects" role="button"&gt;
+    Projects
+    &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-lg-0" role="menu" src="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ffilters%2Fprojects_content&amp;amp;pulls_only=false&amp;amp;q=is%3Aissue+is%3Aopen" preload=""&gt;
+    &lt;div class="SelectMenu-modal"&gt;
+      &lt;header class="SelectMenu-header"&gt;
+        &lt;span class="SelectMenu-title"&gt;Filter by project&lt;/span&gt;
+        &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="project-select-menu"&gt;
+          &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;include-fragment class="SelectMenu-loading"&gt;
+        &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="mx-auto d-block" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+      &lt;/include-fragment&gt;
+     &lt;/div&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+            
+&lt;details class="details-reset details-overlay d-inline-block position-relative px-3" id="milestones-select-menu"&gt;
+  &lt;summary class="btn-link" data-hotkey="m" aria-haspopup="menu" data-ga-click="Issues, Table filter, Milestones" role="button"&gt;
+    Milestones
+    &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-lg-0" role="menu" src="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ffilters%2Fmilestones_content&amp;amp;q=is%3Aissue+is%3Aopen" preload=""&gt;
+    &lt;div class="SelectMenu-modal"&gt;
+      &lt;header class="SelectMenu-header"&gt;
+        &lt;span class="SelectMenu-title"&gt;Filter by milestone&lt;/span&gt;
+        &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="milestones-select-menu"&gt;
+          &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class="SelectMenu-filter"&gt;
+        &lt;input class="SelectMenu-input form-control js-filterable-field" id="milestones-filter-field" type="text" placeholder="Filter milestones" aria-label="Filter milestones" autocomplete="off" autofocus=""&gt;
+      &lt;/div&gt;
+      &lt;include-fragment class="SelectMenu-loading"&gt;
+        &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="mx-auto d-block" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+      &lt;/include-fragment&gt;
+    &lt;/div&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;/span&gt;
+        
+&lt;details class="details-reset details-overlay d-inline-block position-relative px-3" id="assignees-select-menu"&gt;
+  &lt;summary class="btn-link" title="Assignees" data-hotkey="a" aria-haspopup="menu" data-ga-click="Issues, Table filter, Assignee" role="button"&gt;
+    Assignee
+    &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-md-0" role="menu" src="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ffilters%2Fassigns_content&amp;amp;q=is%3Aissue+is%3Aopen" preload=""&gt;
+    &lt;div class="SelectMenu-modal"&gt;
+      &lt;header class="SelectMenu-header"&gt;
+        &lt;span class="SelectMenu-title"&gt;Filter by who’s assigned&lt;/span&gt;
+        &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="assignees-select-menu"&gt;
+          &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class="SelectMenu-filter"&gt;
+        &lt;input type="text" id="assigns-filter-field" class="SelectMenu-input form-control js-filterable-field" placeholder="Filter users" aria-label="Filter users" autocomplete="off" autofocus=""&gt;
+      &lt;/div&gt;
+      &lt;include-fragment class="SelectMenu-loading"&gt;
+        &lt;svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="mx-auto d-block" width="32" height="32"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+      &lt;/include-fragment&gt;
+    &lt;/div&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        
+&lt;details class="details-reset details-overlay d-inline-block position-relative pr-3 pr-sm-0 px-3" id="sort-select-menu"&gt;
+  &lt;summary class="btn-link" title="Sort" aria-haspopup="menu" data-ga-click="Issues, Table filter, Sort" role="button"&gt;
+    Sort&lt;span&gt;&lt;/span&gt;
+    &lt;span class="dropdown-caret hide-sm"&gt;&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;details-menu class="SelectMenu SelectMenu--hasFilter right-0" role="menu" aria-label="Sort by"&gt;
+    &lt;div class="SelectMenu-modal"&gt;
+      &lt;header class="SelectMenu-header"&gt;
+        &lt;span class="SelectMenu-title"&gt;Sort by&lt;/span&gt;
+        &lt;button class="SelectMenu-closeButton" type="button" data-toggle-for="sort-select-menu"&gt;
+          &lt;svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+
+      &lt;div class="SelectMenu-list"&gt;
+          &lt;a class="SelectMenu-item" aria-checked="true" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aopen+is%3Aissue"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Newest&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a class="SelectMenu-item" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Oldest&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a class="SelectMenu-item" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Acomments-desc"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Most commented&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a class="SelectMenu-item" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Acomments-asc"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Least commented&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a class="SelectMenu-item" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Recently updated&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a class="SelectMenu-item" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc"&gt;
+            &lt;svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;span&gt;Least recently updated&lt;/span&gt;
+          &lt;/a&gt;
+
+        &lt;div class="SelectMenu-divider"&gt;Most reactions&lt;/div&gt;
+        &lt;div class="clearfix ws-normal p-3 p-sm-2"&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc"&gt;
+              &lt;g-emoji alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" class="emoji m-0 v-align-baseline"&gt;👍&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions--1-desc"&gt;
+              &lt;g-emoji alias="-1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" class="emoji m-0 v-align-baseline"&gt;👎&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-smile-desc"&gt;
+              &lt;g-emoji alias="smile" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" class="emoji m-0 v-align-baseline"&gt;😄&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-tada-desc"&gt;
+              &lt;g-emoji alias="tada" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" class="emoji m-0 v-align-baseline"&gt;🎉&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-thinking_face-desc"&gt;
+              &lt;g-emoji alias="thinking_face" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png" class="emoji m-0 v-align-baseline"&gt;😕&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-heart-desc"&gt;
+              &lt;g-emoji alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" class="emoji m-0 v-align-baseline"&gt;❤️&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-rocket-desc"&gt;
+              &lt;g-emoji alias="rocket" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png" class="emoji m-0 v-align-baseline"&gt;🚀&lt;/g-emoji&gt;
+            &lt;/a&gt;
+            &lt;a class="reaction-sort-item width-auto m-0 px-3 py-2" aria-checked="false" role="menuitemradio" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-eyes-desc"&gt;
+              &lt;g-emoji alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png" class="emoji m-0 v-align-baseline"&gt;👀&lt;/g-emoji&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+    &lt;div class="table-list-triage flex-auto js-issues-toolbar-triage"&gt;
+      &lt;span class="text-gray"&gt;
+        &lt;span data-check-all-count=""&gt;0&lt;/span&gt; selected
+      &lt;/span&gt;
+
+      &lt;div class="table-list-header-toggle float-right"&gt;
+        &lt;span class="js-issue-triage-spinner" hidden=""&gt;
+          &lt;svg aria-label="Saving" viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="v-align-text-bottom" width="16" height="16"&gt;
+  &lt;circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"&gt;&lt;/circle&gt;
+  &lt;path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"&gt;
+    &lt;animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite"&gt;&lt;/animateTransform&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+        &lt;/span&gt;
+        &lt;span class="text-red f6 js-issue-triage-error" hidden=""&gt;Something went wrong.&lt;/span&gt;
+        &lt;details class="details-reset details-overlay select-menu d-inline-block js-issue-triage-menu" data-url="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ftriage%2Factions_content"&gt;
+  &lt;summary class="btn-link select-menu-button" aria-haspopup="menu" role="button"&gt;
+    Mark as
+  &lt;/summary&gt;
+  &lt;details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" role="menu"&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form action="/AutoTest91/Desafio/issues/triage" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="_method" value="put"&gt;&lt;input type="hidden" name="authenticity_token" value="CRdqAnEPs//it6fuZXab+fx+5RgAqeKmrMYncdH02hZWiLoU+iBiTKhtsjxZbQvbfAGd2CDDw9y0pHQgZ22eMg=="&gt;
+      &lt;div class="select-menu-header"&gt;
+        &lt;span class="select-menu-title"&gt;Actions&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="js-triage-deferred-content"&gt;&lt;/div&gt;
+&lt;/form&gt;  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;details class="details-reset details-overlay select-menu label-select-menu d-inline-block js-issue-triage-menu" data-url="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ftriage%2Flabels_content"&gt;
+  &lt;summary class="btn-link select-menu-button" aria-haspopup="menu" role="button"&gt;
+    Label
+  &lt;/summary&gt;
+  &lt;details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" role="menu"&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form action="/AutoTest91/Desafio/issues/triage" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="_method" value="put"&gt;&lt;input type="hidden" name="authenticity_token" value="dHiIAaH8Bm+MjRk2YZiLHuV9lkfGMbHDP0fYqoO/e6wr51gXKtPX3MZXDORdgxs8ZQLuh+ZbkLknJYv7NSY/iA=="&gt;
+      &lt;div class="select-menu-header"&gt;
+        &lt;span class="select-menu-title"&gt;Apply labels&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="select-menu-filters"&gt;
+        &lt;div class="select-menu-text-filter"&gt;
+          &lt;input type="text" id="triage-label-filter-field" class="form-control js-filterable-field" placeholder="Filter labels" aria-label="Filter labels" autocomplete="off" autofocus=""&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="js-triage-deferred-content"&gt;&lt;/div&gt;
+&lt;/form&gt;  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;details class="details-reset details-overlay select-menu d-inline-block js-issue-triage-menu" data-url="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ftriage%2Fmilestones_content"&gt;
+  &lt;summary class="btn-link select-menu-button" aria-haspopup="menu" role="button"&gt;
+    Milestone
+  &lt;/summary&gt;
+  &lt;details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" role="menu"&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form action="/AutoTest91/Desafio/issues/triage" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="_method" value="put"&gt;&lt;input type="hidden" name="authenticity_token" value="tzdqzxIUqWHyw5qXZPNdMzI4vVwrRRdixFKxSdARA4boqLrZmTt40rgZj0VY6M0RskfFnAsvNhjcMOIYZohHog=="&gt;
+      &lt;div class="select-menu-header"&gt;
+        &lt;span class="select-menu-title"&gt;Set milestone&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class="select-menu-filters"&gt;
+        &lt;div class="select-menu-text-filter"&gt;
+          &lt;input type="text" id="triage-milestones-filter-field" class="form-control js-filterable-field" placeholder="Filter milestones" aria-label="Filter milestones" autocomplete="off" autofocus=""&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="js-triage-deferred-content"&gt;&lt;/div&gt;
+&lt;/form&gt;  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;details class="details-reset details-overlay select-menu d-inline-block js-issue-triage-menu" data-url="/AutoTest91/Desafio/issues/show_menu_content?partial=issues%2Ftriage%2Fassigns_content"&gt;
+  &lt;summary class="btn-link select-menu-button" aria-haspopup="menu" role="button"&gt;
+    Assign
+  &lt;/summary&gt;
+  &lt;details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" role="menu"&gt;
+    &lt;!-- '"` --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;form action="/AutoTest91/Desafio/issues/triage" accept-charset="UTF-8" method="post"&gt;&lt;input type="hidden" name="_method" value="put"&gt;&lt;input type="hidden" name="authenticity_token" value="GWgjSBccXLlhMLuTYhBiPaX8lHuXDEt+lBHLddahcw1G9/NenDONCivqrkFeC/IfJYPsu7dmagSMc5gkYDg3KQ=="&gt;
+      &lt;div class="select-menu-header"&gt;
+        &lt;span class="select-menu-title"&gt;Assign someone&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="select-menu-filters"&gt;
+        &lt;div class="select-menu-text-filter"&gt;
+          &lt;input type="text" id="triage-assigns-filter-field" class="form-control js-filterable-field" placeholder="Filter users" aria-label="Filter users" autocomplete="off" autofocus=""&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="js-triage-deferred-content"&gt;&lt;/div&gt;
+&lt;/form&gt;  &lt;/details-menu&gt;
+&lt;/details&gt;
+
+        &lt;template class="js-triage-loader-template"&gt;
+          &lt;include-fragment&gt;
+            &lt;div class="select-menu-loading-overlay anim-pulse" data-hide-on-error=""&gt;
+              &lt;svg height="32" class="octicon octicon-octoface" viewBox="0 0 24 24" version="1.1" width="32" aria-hidden="true"&gt;&lt;path d="M7.75 11c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5C9 11.56 8.44 11 7.75 11zm1.27 4.5a.469.469 0 01.48-.5h5a.47.47 0 01.48.5c-.116 1.316-.759 2.5-2.98 2.5s-2.864-1.184-2.98-2.5zm7.23-4.5c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5c0-.69-.56-1.25-1.25-1.25z"&gt;&lt;/path&gt;&lt;path fill-rule="evenodd" d="M21.255 3.82a1.725 1.725 0 00-2.141-1.195c-.557.16-1.406.44-2.264.866-.78.386-1.647.93-2.293 1.677A18.442 18.442 0 0012 5c-.93 0-1.784.059-2.569.17-.645-.74-1.505-1.28-2.28-1.664a13.876 13.876 0 00-2.265-.866 1.725 1.725 0 00-2.141 1.196 23.645 23.645 0 00-.69 3.292c-.125.97-.191 2.07-.066 3.112C1.254 11.882 1 13.734 1 15.527 1 19.915 3.13 23 12 23c8.87 0 11-3.053 11-7.473 0-1.794-.255-3.647-.99-5.29.127-1.046.06-2.15-.066-3.125a23.652 23.652 0 00-.689-3.292zM20.5 14c.5 3.5-1.5 6.5-8.5 6.5s-9-3-8.5-6.5c.583-4 3-6 8.5-6s7.928 2 8.5 6z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;div class="text-center p-3" data-show-on-error="" hidden=""&gt;
+              &lt;p&gt;Something went wrong.&lt;/p&gt;
+              &lt;button type="button" data-retry-button="" class="btn btn-sm"&gt;Retry&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/include-fragment&gt;
+        &lt;/template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;div aria-label="Issues" role="group" data-issue-and-pr-hovercards-enabled=""&gt;
+        &lt;div class="js-navigation-container js-active-navigation-container"&gt;
+            
+&lt;div id="issue_12" class="Box-row Box-row--focus-gray p-0 mt-0 js-navigation-item js-issue-row " data-id="748086373"&gt;
+  &lt;div class="d-flex Box-row--drag-hide position-relative"&gt;
+
+      &lt;label class="flex-shrink-0 py-2 pl-3  d-none d-md-block"&gt;
+        &lt;input type="checkbox" data-check-all-item="" class="js-issues-list-check" name="issues[]" value="12" aria-labelledby="issue_12_link" autocomplete="off"&gt;
+      &lt;/label&gt;
+
+    &lt;div class="flex-shrink-0 pt-2 pl-3"&gt;
+      &lt;span class="tooltipped tooltipped-e" aria-label="Open issue"&gt;
+        &lt;svg class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Issue title column --&gt;
+    &lt;div class="flex-auto min-width-0 p-2 pr-3 pr-md-2"&gt;
+
+      &lt;a id="issue_12_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="issue" data-hovercard-url="/AutoTest91/Desafio/issues/12/hovercard" href="/AutoTest91/Desafio/issues/12"&gt;AUT-Issue-20201121192414&lt;/a&gt;
+        &lt;span class="labels lh-default d-block d-md-inline"&gt;
+                &lt;a class="d-inline-block IssueLabel" style="background-color: #d73a4a; color: #ffffff" title="Something isn't working" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3Abug"&gt;bug&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;div class="mt-1 text-small text-gray"&gt;
+        &lt;span class="opened-by"&gt;
+          #12
+            opened &lt;relative-time datetime="2020-11-21T19:24:18Z" class="no-wrap" title="21/11/2020, 19:24 WET"&gt;1 minute ago&lt;/relative-time&gt; by
+            &lt;a class="muted-link" title="Open issues created by AutoTest91" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+author%3AAutoTest91"&gt;AutoTest91&lt;/a&gt;
+            
+        &lt;/span&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+
+
+        
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm "&gt;
+
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+        &lt;div class="AvatarStack AvatarStack--right ml-2 flex-1 flex-shrink-0 "&gt;
+          &lt;div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1" aria-label="Assigned to AutoTest91"&gt;
+
+              &lt;a class="avatar avatar-user" aria-label="AutoTest91’s assigned issues" href="/AutoTest91/Desafio/issues?q=assignee%3AAutoTest91+is%3Aopen"&gt;
+                &lt;img class="from-avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+&lt;/a&gt;          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;a class="d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0" aria-label="Link to Issue. AUT-Issue-20201121192414" href="/AutoTest91/Desafio/issues/12"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+            
+&lt;div id="issue_11" class="Box-row Box-row--focus-gray p-0 mt-0 js-navigation-item js-issue-row " data-id="748086268"&gt;
+  &lt;div class="d-flex Box-row--drag-hide position-relative"&gt;
+
+      &lt;label class="flex-shrink-0 py-2 pl-3  d-none d-md-block"&gt;
+        &lt;input type="checkbox" data-check-all-item="" class="js-issues-list-check" name="issues[]" value="11" aria-labelledby="issue_11_link" autocomplete="off"&gt;
+      &lt;/label&gt;
+
+    &lt;div class="flex-shrink-0 pt-2 pl-3"&gt;
+      &lt;span class="tooltipped tooltipped-e" aria-label="Open issue"&gt;
+        &lt;svg class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Issue title column --&gt;
+    &lt;div class="flex-auto min-width-0 p-2 pr-3 pr-md-2"&gt;
+
+      &lt;a id="issue_11_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="issue" data-hovercard-url="/AutoTest91/Desafio/issues/11/hovercard" href="/AutoTest91/Desafio/issues/11"&gt;AUT-Issue-20201121192340&lt;/a&gt;
+        &lt;span class="labels lh-default d-block d-md-inline"&gt;
+                &lt;a class="d-inline-block IssueLabel" style="background-color: #d73a4a; color: #ffffff" title="Something isn't working" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3Abug"&gt;bug&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;div class="mt-1 text-small text-gray"&gt;
+        &lt;span class="opened-by"&gt;
+          #11
+            opened &lt;relative-time datetime="2020-11-21T19:23:44Z" class="no-wrap" title="21/11/2020, 19:23 WET"&gt;2 minutes ago&lt;/relative-time&gt; by
+            &lt;a class="muted-link" title="Open issues created by AutoTest91" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+author%3AAutoTest91"&gt;AutoTest91&lt;/a&gt;
+            
+        &lt;/span&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+
+
+        
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm "&gt;
+
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+        &lt;div class="AvatarStack AvatarStack--right ml-2 flex-1 flex-shrink-0 "&gt;
+          &lt;div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1" aria-label="Assigned to AutoTest91"&gt;
+
+              &lt;a class="avatar avatar-user" aria-label="AutoTest91’s assigned issues" href="/AutoTest91/Desafio/issues?q=assignee%3AAutoTest91+is%3Aopen"&gt;
+                &lt;img class="from-avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+&lt;/a&gt;          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;a class="d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0" aria-label="Link to Issue. AUT-Issue-20201121192340" href="/AutoTest91/Desafio/issues/11"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+            
+&lt;div id="issue_6" class="Box-row Box-row--focus-gray p-0 mt-0 js-navigation-item js-issue-row " data-id="748083689"&gt;
+  &lt;div class="d-flex Box-row--drag-hide position-relative"&gt;
+
+      &lt;label class="flex-shrink-0 py-2 pl-3  d-none d-md-block"&gt;
+        &lt;input type="checkbox" data-check-all-item="" class="js-issues-list-check" name="issues[]" value="6" aria-labelledby="issue_6_link" autocomplete="off"&gt;
+      &lt;/label&gt;
+
+    &lt;div class="flex-shrink-0 pt-2 pl-3"&gt;
+      &lt;span class="tooltipped tooltipped-e" aria-label="Open issue"&gt;
+        &lt;svg class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Issue title column --&gt;
+    &lt;div class="flex-auto min-width-0 p-2 pr-3 pr-md-2"&gt;
+
+      &lt;a id="issue_6_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="issue" data-hovercard-url="/AutoTest91/Desafio/issues/6/hovercard" href="/AutoTest91/Desafio/issues/6"&gt;testCat&lt;/a&gt;
+        &lt;span class="labels lh-default d-block d-md-inline"&gt;
+                &lt;a class="d-inline-block IssueLabel" style="background-color: #0075ca; color: #ffffff" title="Improvements or additions to documentation" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation"&gt;documentation&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;div class="mt-1 text-small text-gray"&gt;
+        &lt;span class="opened-by"&gt;
+          #6
+            opened &lt;relative-time datetime="2020-11-21T19:08:22Z" class="no-wrap" title="21/11/2020, 19:08 WET"&gt;17 minutes ago&lt;/relative-time&gt; by
+            &lt;a class="muted-link" title="Open issues created by AutoTest91" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+author%3AAutoTest91"&gt;AutoTest91&lt;/a&gt;
+            
+        &lt;/span&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+
+
+        
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm "&gt;
+
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+        &lt;div class="AvatarStack AvatarStack--right ml-2 flex-1 flex-shrink-0 "&gt;
+          &lt;div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1" aria-label="Assigned to AutoTest91"&gt;
+
+              &lt;a class="avatar avatar-user" aria-label="AutoTest91’s assigned issues" href="/AutoTest91/Desafio/issues?q=assignee%3AAutoTest91+is%3Aopen"&gt;
+                &lt;img class="from-avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+&lt;/a&gt;          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;a class="d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0" aria-label="Link to Issue. testCat" href="/AutoTest91/Desafio/issues/6"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+            
+&lt;div id="issue_4" class="Box-row Box-row--focus-gray p-0 mt-0 js-navigation-item js-issue-row " data-id="748073629"&gt;
+  &lt;div class="d-flex Box-row--drag-hide position-relative"&gt;
+
+      &lt;label class="flex-shrink-0 py-2 pl-3  d-none d-md-block"&gt;
+        &lt;input type="checkbox" data-check-all-item="" class="js-issues-list-check" name="issues[]" value="4" aria-labelledby="issue_4_link" autocomplete="off"&gt;
+      &lt;/label&gt;
+
+    &lt;div class="flex-shrink-0 pt-2 pl-3"&gt;
+      &lt;span class="tooltipped tooltipped-e" aria-label="Open issue"&gt;
+        &lt;svg class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Issue title column --&gt;
+    &lt;div class="flex-auto min-width-0 p-2 pr-3 pr-md-2"&gt;
+
+      &lt;a id="issue_4_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="issue" data-hovercard-url="/AutoTest91/Desafio/issues/4/hovercard" href="/AutoTest91/Desafio/issues/4"&gt;testCat&lt;/a&gt;
+        &lt;span class="labels lh-default d-block d-md-inline"&gt;
+                &lt;a class="d-inline-block IssueLabel" style="background-color: #0075ca; color: #ffffff" title="Improvements or additions to documentation" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation"&gt;documentation&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;div class="mt-1 text-small text-gray"&gt;
+        &lt;span class="opened-by"&gt;
+          #4
+            opened &lt;relative-time datetime="2020-11-21T18:29:37Z" class="no-wrap" title="21/11/2020, 18:29 WET"&gt;1 hour ago&lt;/relative-time&gt; by
+            &lt;a class="muted-link" title="Open issues created by AutoTest91" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+author%3AAutoTest91"&gt;AutoTest91&lt;/a&gt;
+            
+        &lt;/span&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+
+
+        
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm "&gt;
+
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+        &lt;div class="AvatarStack AvatarStack--right ml-2 flex-1 flex-shrink-0 "&gt;
+          &lt;div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1" aria-label="Assigned to AutoTest91"&gt;
+
+              &lt;a class="avatar avatar-user" aria-label="AutoTest91’s assigned issues" href="/AutoTest91/Desafio/issues?q=assignee%3AAutoTest91+is%3Aopen"&gt;
+                &lt;img class="from-avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+&lt;/a&gt;          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;a class="d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0" aria-label="Link to Issue. testCat" href="/AutoTest91/Desafio/issues/4"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+            
+&lt;div id="issue_1" class="Box-row Box-row--focus-gray p-0 mt-0 js-navigation-item js-issue-row " data-id="748070958"&gt;
+  &lt;div class="d-flex Box-row--drag-hide position-relative"&gt;
+
+      &lt;label class="flex-shrink-0 py-2 pl-3  d-none d-md-block"&gt;
+        &lt;input type="checkbox" data-check-all-item="" class="js-issues-list-check" name="issues[]" value="1" aria-labelledby="issue_1_link" autocomplete="off"&gt;
+      &lt;/label&gt;
+
+    &lt;div class="flex-shrink-0 pt-2 pl-3"&gt;
+      &lt;span class="tooltipped tooltipped-e" aria-label="Open issue"&gt;
+        &lt;svg class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Issue title column --&gt;
+    &lt;div class="flex-auto min-width-0 p-2 pr-3 pr-md-2"&gt;
+
+      &lt;a id="issue_1_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="issue" data-hovercard-url="/AutoTest91/Desafio/issues/1/hovercard" href="/AutoTest91/Desafio/issues/1"&gt;AUT-Issue-20201121181445&lt;/a&gt;
+        &lt;span class="labels lh-default d-block d-md-inline"&gt;
+                &lt;a class="d-inline-block IssueLabel" style="background-color: #d73a4a; color: #ffffff" title="Something isn't working" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+label%3Abug"&gt;bug&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;div class="mt-1 text-small text-gray"&gt;
+        &lt;span class="opened-by"&gt;
+          #1
+            opened &lt;relative-time datetime="2020-11-21T18:14:49Z" class="no-wrap" title="21/11/2020, 18:14 WET"&gt;1 hour ago&lt;/relative-time&gt; by
+            &lt;a class="muted-link" title="Open issues created by AutoTest91" data-hovercard-type="user" data-hovercard-url="/users/AutoTest91/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+author%3AAutoTest91"&gt;AutoTest91&lt;/a&gt;
+            
+        &lt;/span&gt;
+
+        &lt;span class="d-none d-md-inline"&gt;
+
+
+        
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-shrink-0 col-3 pt-2 text-right pr-3 no-wrap d-flex hide-sm "&gt;
+
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+        &lt;div class="AvatarStack AvatarStack--right ml-2 flex-1 flex-shrink-0 "&gt;
+          &lt;div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1" aria-label="Assigned to AutoTest91"&gt;
+
+              &lt;a class="avatar avatar-user" aria-label="AutoTest91’s assigned issues" href="/AutoTest91/Desafio/issues?q=assignee%3AAutoTest91+is%3Aopen"&gt;
+                &lt;img class="from-avatar avatar-user" src="https://avatars1.githubusercontent.com/u/74671357?s=40&amp;amp;v=4" width="20" height="20" alt="@AutoTest91"&gt;
+&lt;/a&gt;          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+
+      &lt;span class="ml-2 flex-1 flex-shrink-0"&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+      &lt;a class="d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0" aria-label="Link to Issue. AUT-Issue-20201121181445" href="/AutoTest91/Desafio/issues/1"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="paginate-container d-none d-sm-flex flex-sm-justify-center"&gt;
+      
+  &lt;/div&gt;
+
+  &lt;div class="paginate-container d-sm-none mb-5"&gt;
+      
+  &lt;/div&gt;
+
+  &lt;div class="protip"&gt;
+    &lt;svg class="octicon octicon-light-bulb text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;strong&gt;ProTip!&lt;/strong&gt;
+    &lt;a href="/AutoTest91/Desafio/issues?q=is%3Aissue+is%3Aopen+no%3Amilestone"&gt;no:milestone&lt;/a&gt; will show everything without a milestone.
+  &lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+    &lt;/main&gt;
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+
+          
+&lt;div class="footer container-xl width-full p-responsive" role="contentinfo"&gt;
+    &lt;div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light "&gt;
+      &lt;a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://github.com"&gt;
+        &lt;svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/a&gt;
+      &lt;ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0"&gt;
+        &lt;li class="mr-3 mr-lg-0"&gt;© 2020 GitHub, Inc.&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms"&gt;Terms&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy"&gt;Privacy&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="js-cookie-consent-preferences-link-container mr-3 mr-lg-0"&gt;
+  &lt;button data-ga-click="Footer, go to cookie preferences, text:cookie preferences" class="btn-link js-cookie-consent-preferences-link" type="button"&gt;Cookie Preferences&lt;/button&gt;
+&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to security, text:security" href="https://github.com/security"&gt;Security&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status"&gt;Status&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to help, text:help" href="https://docs.github.com"&gt;Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact"&gt;Contact GitHub&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="mr-3 mr-lg-0"&gt;&lt;a href="https://docs.github.com" data-ga-click="Footer, go to api, text:api"&gt;API&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="mr-3 mr-lg-0"&gt;&lt;a href="https://services.github.com" data-ga-click="Footer, go to training, text:training"&gt;Training&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="mr-3 mr-lg-0"&gt;&lt;a data-ga-click="Footer, go to about, text:about" href="https://github.com/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;div class="d-flex flex-justify-center pb-6"&gt;
+    &lt;span class="f6 text-gray-light"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  
+&lt;/div&gt;
+
+
+
+  &lt;div id="ajax-error-message" class="ajax-error-message flash flash-error"&gt;
+    &lt;svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error"&gt;
+      &lt;svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    You can’t perform that action at this time.
+  &lt;/div&gt;
+
+
+  &lt;div class="js-stale-session-flash flash flash-warn flash-banner" hidden=""&gt;
+    &lt;svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;span class="js-stale-session-flash-signed-in" hidden=""&gt;You signed in with another tab or window. &lt;a href=""&gt;Reload&lt;/a&gt; to refresh your session.&lt;/span&gt;
+    &lt;span class="js-stale-session-flash-signed-out" hidden=""&gt;You signed out in another tab or window. &lt;a href=""&gt;Reload&lt;/a&gt; to refresh your session.&lt;/span&gt;
+  &lt;/div&gt;
+    &lt;template id="site-details-dialog"&gt;
+  &lt;details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark hx_rsm" open=""&gt;
+    &lt;summary role="button" aria-label="Close dialog"&gt;&lt;/summary&gt;
+    &lt;details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal"&gt;
+      &lt;button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog=""&gt;
+        &lt;svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+      &lt;div class="octocat-spinner my-6 js-details-dialog-spinner"&gt;&lt;/div&gt;
+    &lt;/details-dialog&gt;
+  &lt;/details&gt;
+&lt;/template&gt;
+
+    &lt;div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0"&gt;
+  &lt;div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;div class="js-cookie-consent-banner" hidden=""&gt;
+  &lt;div class="hx_cookie-banner p-2 p-sm-3 p-md-4"&gt;
+    &lt;div style="max-width: 1194px;" class="Box hx_cookie-banner-box box-shadow-medium mx-auto"&gt;
+    &lt;div class="Box-body border-0 py-0 px-3 px-md-4"&gt;
+      &lt;div class="js-main-cookie-banner hx_cookie-banner-main"&gt;
+          &lt;div class="d-md-flex flex-items-center py-3"&gt;
+            &lt;p class="f5 flex-1 mb-3 mb-md-0"&gt;
+              
+  We use &lt;span class="text-bold"&gt;optional&lt;/span&gt; third-party analytics cookies to understand how you use GitHub.com so we can build better products.
+
+              &lt;span class="btn-link js-cookie-consent-learn-more"&gt;Learn more&lt;/span&gt;.
+            &lt;/p&gt;
+            &lt;div class="d-flex d-md-block flex-wrap flex-sm-nowrap"&gt;
+              &lt;button class="btn btn-outline flex-1 mr-1 mx-sm-1 m-md-0 ml-md-2 js-cookie-consent-accept"&gt;Accept&lt;/button&gt;
+              &lt;button class="btn btn-outline flex-1 ml-1 m-md-0 ml-md-2 js-cookie-consent-reject"&gt;Reject&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="js-cookie-details hx_cookie-banner-details" hidden=""&gt;
+          &lt;div class="d-md-flex flex-items-center py-3"&gt;
+            &lt;p class="f5 flex-1 mb-2 mb-md-0"&gt;
+              
+  We use &lt;span class="text-bold"&gt;optional&lt;/span&gt; third-party analytics cookies to understand how you use GitHub.com so we can build better products.
+
+              &lt;br&gt;
+              You can always update your selection by clicking &lt;span class="text-bold"&gt;Cookie Preferences&lt;/span&gt; at the bottom of the page.
+              For more information, see our &lt;a href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement"&gt;Privacy Statement&lt;/a&gt;.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div class="d-md-flex flex-items-center py-3 border-top"&gt;
+            &lt;div class="f5 flex-1 mb-2 mb-md-0"&gt;
+              &lt;h5 class="mb-1"&gt;Essential cookies&lt;/h5&gt;
+              &lt;p class="f6 mb-md-0"&gt;We use essential cookies to perform essential website functions, e.g. they're used to log you in. 
+                &lt;a href="https://docs.github.com/en/github/site-policy/github-subprocessors-and-cookies"&gt;Learn more&lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="text-right"&gt;
+              &lt;h5 class="text-blue"&gt;Always active&lt;/h5&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="d-md-flex flex-items-center py-3 border-top"&gt;
+            &lt;div class="f5 flex-1 mb-2 mb-md-0"&gt;
+              &lt;h5 class="mb-1"&gt;Analytics cookies&lt;/h5&gt;
+              &lt;p class="f6 mb-md-0"&gt;We use analytics cookies to understand how you use our websites so we can make them better, e.g. they're used to gather information about the pages you visit and how many clicks you need to accomplish a task. 
+                &lt;a href="https://docs.github.com/en/github/site-policy/github-subprocessors-and-cookies"&gt;Learn more&lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="text-right"&gt;
+              &lt;div class="BtnGroup mt-1 mt-md-0 ml-2"&gt;
+                &lt;button class="btn btn-outline BtnGroup-item js-accept-analytics-cookies" type="button"&gt;Accept&lt;/button&gt;
+                &lt;button class="btn btn-outline BtnGroup-item js-reject-analytics-cookies" type="button"&gt;Reject&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="text-right py-3 border-top"&gt;
+            &lt;button class="btn btn-primary js-save-cookie-preferences" type="button" disabled=""&gt;Save preferences&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+
+
+&lt;div aria-live="polite" class="sr-only"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201121 19:25:32.775" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201121 19:25:32.775" starttime="20201121 19:25:32.412"></status>
+</kw>
+<msg timestamp="20201121 19:25:32.776" level="FAIL">Page should have contained element 'xpath=//a[contains(text(),'AUT-Issue-20201121192439')]' but did not</msg>
+<status status="FAIL" endtime="20201121 19:25:32.777" starttime="20201121 19:25:32.370"></status>
+</kw>
+<msg timestamp="20201121 19:25:32.777" level="INFO">${exist} = False</msg>
+<status status="PASS" endtime="20201121 19:25:32.777" starttime="20201121 19:25:32.369"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${exist}' == 'True'</arg>
+<arg>fail</arg>
+<arg>A issue ${issue} nao foi eliminada com sucesso.</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:32.778" starttime="20201121 19:25:32.777"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>*** End: Eliminar um issue***</arg>
+</arguments>
+<status status="PASS" endtime="20201121 19:25:32.778" starttime="20201121 19:25:32.778"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:32.778" starttime="20201121 19:25:27.407"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:32.778" starttime="20201121 19:25:27.407"></status>
+</kw>
+<status status="PASS" endtime="20201121 19:25:32.778" starttime="20201121 19:25:19.801"></status>
+</kw>
+<doc>Realização de login na página web, com username e/ou password
+Pesquisar um repositorio
+Eliminar ou fechar uma issue</doc>
+<status status="PASS" endtime="20201121 19:25:32.779" critical="yes" starttime="20201121 19:25:08.076"></status>
+</test>
+<status status="PASS" endtime="20201121 19:25:32.779" starttime="20201121 19:25:07.787"></status>
+</suite>
+<status status="PASS" endtime="20201121 19:25:32.781" starttime="20201121 19:25:07.759"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Web" pass="1">Web</stat>
+<stat fail="0" id="s1-s1" name="Eliminar ou fechar uma issue" pass="1">Web.Eliminar ou fechar uma issue</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
