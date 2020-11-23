@@ -75,3 +75,17 @@ ${notConflictPullRequest}        xpath=//div[contains(@class,'erging-body') and 
 ${confirmMerge}                  xpath=//button[contains(text(),'Confirm merge')]
 ${deleteBranch}                  xpath=//button[contains(text(),'Delete branch')]
 ${pullMergeSucess}               xpath=//h4[contains(text(),'Pull request successfully merged and closed')]
+
+# spath settings branch
+${settingBranch}                 xpath=//a[contains(@data-selected-links,'repo_branch_settings') and not(contains(@class,'js-responsive-underlinenav-item'))]
+${titleSettingsBranch}           xpath=//h2[contains(text(),'Default branch')]
+${includAdminSettingsBranch}     xpath=//span[contains(text(),'restrictions above for administrators.')]/../label/input[@checked='checked']
+${reqPullSettingsBranch}         xpath=//span[contains(text(),'When enabled, all commits')]/../label/input[@checked='checked']
+
+#selecionar branch
+${clickOptionSelectBranch}       xpath=//summary[@title='Switch branches or tags']
+
+${alertMergBlock}                xpath=//div[text()='Merging is blocked']
+${needReviewBlock}               xpath=//h3[contains(text(),'Review required')]
+${closePullRequest}              xpath=//span[text()='Close pull request']
+

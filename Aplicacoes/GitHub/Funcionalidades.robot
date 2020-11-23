@@ -273,7 +273,7 @@ Editar ficheiro
 
 
 Criar pull request e merge num ficheiro editado
-    [Documentation]   criacao de um pull request e um merge para oramo principal (main) num ficheiro editado
+    [Documentation]   criacao de um pull request e um merge para o ramo principal (main) num ficheiro editado
     [Arguments]       ${descricao}
 
     log to console      *** Start: Criar pull request e merge num ficheiro editado ***
@@ -300,3 +300,20 @@ Criar pull request e merge num ficheiro editado
     log to console             Merge realizado com sucesso: ${pullMergeSucess}
 
     log to console      *** End: Criar pull request e merge num ficheiro editado ***
+
+Editar ficheiro numa branch especifica
+    [Documentation]   Editar um determinado ficheiro numa branch especifica
+    [Arguments]       ${nomeFicheiro}=${EMPTY}      ${branch}=${EMPTY}    ${descricao}=${EMPTY}
+    ...               ${linha}=${EMPTY}
+
+    log to console      *** Start: Editar ficheiro numa branch especifica ***
+
+    click element                       ${clickOptionSelectBranch}
+    wait until element is visible       xpath=//span[text()='${branch}']
+    click element                       xpath=//span[text()='${branch}']
+
+    capture page screenshot             BranchSelect.png
+
+    Editar ficheiro                     ${nomeFicheiro}      ${descricao}     ${linha}      new
+
+    log to console      *** End: Editar ficheiro numa branch especifica ***
