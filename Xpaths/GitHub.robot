@@ -6,7 +6,6 @@ Library     String
 
 *** Variables ***
 
-# Exemplo Negacao: //a[contains(@data-ga-click,'Sign up') and not(contains(@class,'HeaderMenu'))]
 ${IconGitHub}        xpath=//a[@class='Header-link ']
 ${hMenSignUp}        xpath=//a[contains(@data-ga-click,'Sign up') and (contains(@class,'HeaderMenu'))]
 ${hMenSignIn}        xpath=//a[contains(@data-ga-click,'Sign in') and (contains(@class,'HeaderMenu'))]
@@ -19,7 +18,6 @@ ${inputPass}         xpath=//input[@name='password']
 ${btnSignIn}         xpath=//input[@value='Sign in']
 
 ${erroLogin}         xpath=//div[contains(@class,'flash-error') and not(contains(@class,'ajax'))]
-#//div[contains(@class,'flash-error') and not(contains(@class,'ajax'))]
 
 # Xpaths de criacao de repositorio
 ${iconAddRepos}              xpath=//summary[contains(@data-ga-click,'Header, create new')]

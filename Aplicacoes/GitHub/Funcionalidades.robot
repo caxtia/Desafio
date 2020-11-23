@@ -35,7 +35,7 @@ Realizar login no Github
     ...     ELSE        input text      ${inputPass}            ${pass}
 
     click element                       ${btnSignIn}
-    # ver se aqui vou por icon git hub ou avatar de login
+
     wait until element is visible       ${IconGitHub}
 
     log to console      *** End: Realizar login no Github ***
