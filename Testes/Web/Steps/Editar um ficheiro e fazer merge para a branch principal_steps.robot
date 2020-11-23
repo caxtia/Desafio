@@ -1,5 +1,5 @@
 *** Settings ***
-Library     Selenium2Library
+Library     SeleniumLibrary
 Library     BuiltIn
 Library     String
 
@@ -17,6 +17,8 @@ Realizar Login na pagina web GitHub
 
 Selecionar um repositorio e editar ficheiro
     [Documentation]     Pesquisar e selecionar o ficheiro a editar
+    ...                 fazer pull request, merge para branch principal
+    ...                 validar as alteracoes no ficheiro da branch principal
     [Arguments]         ${nomeRepositorio}=${EMPTY}      ${nomeFicheiro}=${EMPTY}      ${descricao}=${EMPTY}
     ...                 ${linha}=${EMPTY}
 

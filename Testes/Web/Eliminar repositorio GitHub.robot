@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  Steps/Eliminar repositorio GitHub_steps.robot
-#Test Teardown       Close All Browsers
+Test Teardown       Close All Browsers
 
 *** Variables ***
 ${nomeRepositorio}

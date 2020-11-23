@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  Steps/Criacao de Issues_steps.robot
-#Test Teardown       Close All Browsers
+Test Teardown       Close All Browsers
 
 *** Variables ***
 ${nomeRepositorio}

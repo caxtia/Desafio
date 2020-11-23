@@ -1,5 +1,5 @@
 *** Settings ***
-Library     Selenium2Library
+Library     SeleniumLibrary
 Library     BuiltIn
 Library     String
 
@@ -89,3 +89,17 @@ ${alertMergBlock}                xpath=//div[text()='Merging is blocked']
 ${needReviewBlock}               xpath=//h3[contains(text(),'Review required')]
 ${closePullRequest}              xpath=//span[text()='Close pull request']
 
+# xpath novo projeto
+${btnNewProject}                 xpath=//a[text()='New project' and (contains(@class,'d-block'))]
+${nameNewProject}                xpath=//input[@id='project_name']
+${radButnProjectPublic}          xpath=//input[@id='project_public_true']
+${radButnProjectPrivad}          xpath=//input[@id='project_public_false']
+${btnCreateProject}              xpath=//button[text()='Create project']
+${SelectTemplate}                xpath=//summary[(@aria-haspopup='menu') and not(contains(@class,'Header'))]
+${addToDo}                       xpath=//span[(@class='js-project-column-name') and (text()='To do')]/../../../button
+
+${closeAddCards}                 xpath=//button[@aria-label='Hide project triage' and (contains(@class,'project-pane-close'))]
+${menuProject}                   xpath=//span[text()='Menu']
+${btnCloseProject}               xpath=//button[@data-dialog-id='close-project']
+${btnConfirmCloseProject}        xpath=//button[contains(text(),'Close project') and not(contains(@class,'project-dialog-button'))]
+${confirmProjectClose}           xpath=//span[(contains(@title,'Closed on'))]

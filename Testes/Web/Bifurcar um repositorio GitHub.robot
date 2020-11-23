@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  Steps/Bifurcar um repositorio GitHub_steps.robot
-#Test Teardown       Close All Browsers
+Test Teardown       Close All Browsers
 
 *** Variables ***
 ${nomeRepositorio}

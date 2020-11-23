@@ -1,5 +1,5 @@
 *** Settings ***
-Library     Selenium2Library
+Library     SeleniumLibrary
 Library     BuiltIn
 Library     String
 Library     DateTime
@@ -317,3 +317,54 @@ Editar ficheiro numa branch especifica
     Editar ficheiro                     ${nomeFicheiro}      ${descricao}     ${linha}      new
 
     log to console      *** End: Editar ficheiro numa branch especifica ***
+
+Criar um projeto novo
+    [Documentation]   Criar um novo projeto, selecionando o template passado como parametro
+    [Arguments]       ${nomeProjeto}      ${tipoPivacidade}         ${template}
+
+    log to console      *** Start: Criar um projeto novo projeto ***
+
+    wait until element is visible           ${btnNewProject}
+    click element                           ${btnNewProject}
+
+    wait until element is visible           ${nameNewProject}
+    input text                              ${nameNewProject}           ${nomeProjeto}
+
+    wait until element is visible           ${SelectTemplate}
+    click element                           ${SelectTemplate}
+    wait until element is visible           xpath=//span[text()='${template}']
+    click element                           xpath=//span[text()='${template}']
+
+    capture page screenshot         TemplateEscolhido.png
+
+    run keyword if      ('${tipoPivacidade}' != '${EMPTY}' and '${tipoPivacidade}' == 'Public')       click element      ${radButnProjectPublic}
+    ...     ELSE IF     ('${tipoPivacidade}' != '${EMPTY}' and '${tipoPivacidade}' == 'Private')      click element      ${radButnProjectPrivad}
+    ...     ELSE        click element      ${radButnProjectPrivad}
+
+    wait until element is visible           ${btnCreateProject}
+    click element                           ${btnCreateProject}
+
+    log to console      *** End: Criar um projeto novo projeto ***
+
+Cancelar um projeto
+    [Documentation]   cancelar um projeto
+    [Arguments]
+
+    log to console      *** Start: Cancelar um projeto ***
+    wait until element is visible      ${closeAddCards}
+    capture page screenshot            ProjetoCriado.png
+
+    click element                   ${closeAddCards}
+
+    click element                       ${menuProject}
+    wait until element is visible       ${btnCloseProject}
+    click element                       ${btnCloseProject}
+
+
+    wait until element is visible       ${btnConfirmCloseProject}
+    click element                       ${btnConfirmCloseProject}
+    wait until element is visible       ${confirmProjectClose}
+
+    capture page screenshot            ProjetoCancelado.png
+
+    log to console      *** End: Cancelar um projeto ***

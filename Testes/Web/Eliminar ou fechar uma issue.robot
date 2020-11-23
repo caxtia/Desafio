@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  Steps/Eliminar ou fechar uma issue_steps.robot
-#Test Teardown       Close All Browsers
+Test Teardown       Close All Browsers
 
 *** Variables ***
 ${nomeRepositorio}
