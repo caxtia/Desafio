@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  Steps/Editar um ficheiro e fazer merge para a branch principal_steps.robot
-#Test Teardown       Close All Browsers
+Test Teardown       Close All Browsers
 
 *** Variables ***
 ${nomeRepositorio}

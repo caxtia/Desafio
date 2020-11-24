@@ -6,7 +6,7 @@ Test Teardown       Close All Browsers
 ${nomeRepositorio}
 ${tituloIssue}
 
-${Acao}                         # E - Eliminar  ; F  Fechar
+${Acao}                         # colocar E ou F (E - Eliminar  ; F  Fechar)
 
 
 *** Test Cases ***

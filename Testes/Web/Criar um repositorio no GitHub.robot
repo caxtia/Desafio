@@ -14,7 +14,8 @@ ${inicializarRepos}                    #Readme_ ; git_Actionscript ; license_Apa
 Criar um repositorio no GitHub
     [Documentation]     Realização de login na página web, com username e/ou password
     ...                 Criacao de um novo repositorio
-    ...                 Teste dinamico, se nao preencher nenhum dos parametros de entrada, sao gerados com dados dinamicos
+    ...                 Teste dinamico, se nao preencher nenhum dos parametros de entrada,
+    ...                 sao gerados com dados dinamicos
 
     Realizar Login na pagina web GitHub
     Criar um novo repositorio       ${nomeRepositorio}      ${descricao}        ${tipoPivacidade}        ${inicializarRepos}
