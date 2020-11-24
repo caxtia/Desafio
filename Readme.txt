@@ -13,10 +13,13 @@ e instalar na pasta C:\Python27
 	- pip install selenium==3.8.1
 	- pip install decorator==4.4.0
 	- pip install --upgrade robotframework-seleniumlibrary
-	 
+
+4 - Download do ChromeDriver
+	- https://chromedriver.chromium.org/downloads  (Ver a versão do chrome para validar qual driver a utilizar)
+	- coloca-lo em C:\Program Files (x86)\Google\Chrome\Application e C:\Python27\Scripts
 
 
-4 - Dentro do Pycharm
+5 - Dentro do Pycharm
 	- File -> Settings -> Tools -> External Tools
 		- clicar no " + ", Name: Robot-SingleTest   ; Program: C:\Python27\Scripts\robot.exe   ; Arguments: -d Results -v ENV:QA --test "$SelectedText$" "$FileDir$"
 			Working directory: $FileDir$
@@ -24,9 +27,7 @@ e instalar na pasta C:\Python27
 	- File -> Settings -> Tools -> Web Browser
 		- Selecionar o Chrome, Default Browser: Custom Path    C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 
-5 - Download do ChromeDriver
-	- https://chromedriver.chromium.org/downloads  (Ver a versão do chrome para validar qual driver a utilizar) 
-	- coloca-lo em C:\Program Files (x86)\Google\Chrome\Application e C:\Python27\Scripts
+
 
 
 
